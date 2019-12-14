@@ -29,6 +29,8 @@ iostream
 -
 ParticleSystem.h
 /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/ParticleSystem.h
+tbb/tbb.h
+-
 
 /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp
 Eigen/Core

@@ -4,7 +4,7 @@
 #include <sys/stat.h>
 #include <iostream>
 #include "ParticleSystem.h"
-
+#include <tbb/tbb.h>
 using namespace std;
 
 template<class T, int dim>
@@ -42,7 +42,7 @@ public:
 
 	SimulationDriver() {
 		// Set values for simulation parameters
-		dt = 1e-3;
+		dt = 1e-4;
 		gravity = TV(0, -9.8, 0);
 
 		// Set values for grid parameters
@@ -53,7 +53,7 @@ public:
 		res = (maxCorner - minCorner) / dx + 1;
 		// Set values for add-on grid parameters
 		NpPerCell1D = 2.f;
-		offsetGrid = 4.f;
+		offsetGrid = 7.f;
 		numNode = res * res * res;
 
 		// Set values for particles
@@ -69,6 +69,7 @@ public:
 		vp = vector<TV>(Np, TV::Zero());
 		identity.setIdentity();
 		Fp = vector<TSM>(Np, identity);
+		cout << "Np = " << Np <<endl;
 	}
 
 	void sampleParticles() {
@@ -88,9 +89,9 @@ public:
 								T offsetZ = randWithOffset(0, estDistBwPars1D, 0.000001f);
 
 								TV parPos = TV::Zero();
-								parPos[0] = cellWorldSpace[0] + px * estDistBwPars1D + offsetX;
-								parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D + offsetY;
-								parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D + offsetZ;
+								parPos[0] = cellWorldSpace[0] + px * estDistBwPars1D;// + offsetX;
+								parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D;// + offsetY;
+								parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D;// + offsetZ;
 								xp.push_back(parPos);
 								// cout << "p0 " << parPos[0] << endl;
 								// cout << "p1 " << parPos[1] << endl;
@@ -173,6 +174,10 @@ public:
 			computeWeights1D(w2, dw2, base_node2, X_index_space[1]);
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
 
+			// std::cout << "xp:" << X(0) << " " << X(1) << " " << X(2) << " xp in grid: " << X_index_space(0) << " " << X_index_space(1) << " " << X_index_space(2) << std::endl;
+			// std::cout << "base_node: " << base_node1 << " " << base_node2 << " " << base_node3;
+			// std::getchar();
+
 			T sum_wijk = 0;
 			for (int i = 0; i < 3; i++) {
 				T wi = w1[i];
@@ -188,11 +193,13 @@ public:
 
 						// splat mass
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
-						if (idx > numNode) {
+						if (idx >= numNode || idx < 0) {
+							std::cout << numNode << std::endl;
 							cout << "P2G: idx out of bounds!" << endl;
 							cout << "P2G: node_i = " << node_i << endl;
 							cout << "P2G: node_j = " << node_j << endl;
 							cout << "P2G: node_k = " << node_k << endl;
+							cout << idx << endl;
 						}
 						mg[idx] += mp[p] * wijk;
 
@@ -217,6 +224,10 @@ public:
 	}
 
 	void addGravity(vector<TV>& force, const vector<T>& mg, const vector<int>& active_nodes, const TV& gravity) {
+		// tbb::parallel_for(0, (int)active_nodes.size(), [&](int i){
+		// 	int idx = active_nodes[i];
+		// 	force[idx] += mg[idx] * gravity;
+		// });
 		for (int i = 0; i < active_nodes.size(); i++) {
 			int idx = active_nodes[i];
 			force[idx] += mg[idx] * gravity;
@@ -244,25 +255,30 @@ public:
 		}
 	}
 
-	void fixedCorotated(const TSM& F, const T& mu, const T& lambda, TSM& P) {
+	void fixedCorotated(TSM& F, const T& mu, const T& lambda, TSM& P) {
 		TSM u, sigma, v;
 		polarSVD(u, sigma, v, F);
-		TSM FChanged = u * sigma * v.transpose();
+		// F = u * sigma * v.transpose();
+		//TSM FChanged = u * sigma * v.transpose();
 		TSM R = u * v.transpose();
-		T J = FChanged.determinant();
-		//cout << "J = " << J << endl;
+		//T J = FChanged.determinant();
 
-		TSM A = FChanged.adjoint().transpose();
-		P = 2 * mu * (F - R) + lambda * (J - 1) * A;
+		T J = F.determinant();
+		// cout << "J = " << J << endl;
+
+		//TSM A = FChanged.adjoint().transpose();
+		TSM A = J * F.inverse().transpose();
+		P = T(2) * mu * (F - R) + lambda * (J - 1) * A;
 	}
 
 	void addElasticity( vector<TV>& force, const vector<TV>& xp, const vector<TSM>& Fp, const T& Vp0, const T& mu, const T& lambda) {
-		//vector<TV> forceBefore = force;
+		vector<TV> forceBefore = force;
 		for (int p = 0; p < Np; p++) {
 			TSM thisFp = Fp[p];
 			TSM thisP;
 			fixedCorotated(thisFp, mu, lambda, thisP);
 			TSM Vp0PFt = Vp0 * thisP * thisFp.transpose();
+			// std::cout << thisP << std::endl;
 
 			TV X = xp[p];
 			TV X_index_space = X / dx;
@@ -273,6 +289,18 @@ public:
 			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
 			computeWeights1D(w2, dw2, base_node2, X_index_space[1]);
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
+
+			// cout << "w1 = " << endl << w1 << endl;
+			// cout << "w2 = " << endl <<  w2 << endl;
+			// cout << "w3 = " << endl <<  w3 << endl;
+			// cout << "dw1 = " << endl <<  dw1 << endl;
+			// cout << "dw2 = " << endl <<  dw2 << endl;
+			// cout << "dw3 = " << endl <<  dw3 << endl;
+			// cout << "Vp0PFt = " << endl << Vp0PFt << endl;
+
+			if (base_node1 >= res|| base_node2 >= res|| base_node3 >= res) {
+				cout << "addElasticity: out of bound base nodes" << endl;
+			}
 
 			for (int i = 0; i < 3; i++) {
 				T wi = w1[i];
@@ -298,8 +326,8 @@ public:
 						TV foo = -Vp0PFt * grad_w;
 
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
-						if (idx > numNode) {
-							cout << "G2P: idx out of bound!" << endl;
+						if (idx >= numNode || idx < 0) {
+							cout << "addElasticity: idx out of bound!" << endl;
 							cout << "node_i = " << node_i << endl;
 							cout << "node_j = " << node_j << endl;
 							cout << "node_k = " << node_k << endl;
@@ -309,6 +337,7 @@ public:
 						// cout << "Vp0PFt = " << endl << Vp0PFt << endl;
 						// cout << "Vp0 = " << endl << Vp0 << endl;
 						force[idx] += foo;
+
 					}
 				}
 			}
@@ -404,7 +433,7 @@ public:
 						T node_k = base_node3 + k;
 
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
-						if (idx > numNode) {
+						if (idx >= numNode || idx < 0) {
 							cout << "G2P: idx out of bound!" << endl;
 							cout << "node_i = " << node_i << endl;
 							cout << "node_j = " << node_j << endl;
@@ -437,7 +466,7 @@ public:
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
 
 			// Compute grad_vp
-			TSM grad_vp;
+			TSM grad_vp = TSM::Zero(dim, dim);
 			for (int i = 0; i < 3; i++) {
 				T wi = w1[i];
 				T dwidxi = dw1[i] / dx;
@@ -460,8 +489,8 @@ public:
 
 						TV grad_w = TV(dwijkdxi, dwijkdxj, dwijkdxk);
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
-						if (idx > numNode) {
-							cout << "G2P: idx out of bound!" << endl;
+						if (idx >= numNode || idx < 0) {
+							cout << "evolveF: idx out of bound!" << endl;
 							cout << "node_i = " << node_i << endl;
 							cout << "node_j = " << node_j << endl;
 							cout << "node_k = " << node_k << endl;
@@ -472,7 +501,7 @@ public:
 				}
 			}
 
-			TSM newFp = (identity + dt * grad_vp) * thisFp;
+			TSM newFp = (TSM::Identity() + dt * grad_vp) * thisFp;
 
 			for (int i = 0; i < dim; i++) {
 				for (int j = 0; j < dim; j++) {
@@ -493,24 +522,37 @@ public:
 		// P2G
 		//TV Lp = computeParticleMomentum(mp, vp);
 		transferP2G(mg, vgn, active_nodes, xp, mp, vp);
+		cout << "P2G" << endl;
 		//TV Lg = computeGridMomentum(mg, vgn);
 		// cout << "P2G: Lp = " << endl << Lp << endl;
 		// cout << "P2G: Lg = " << endl << Lg << endl;
-
+		TV max_vgn = *std::max_element(vgn.begin(), vgn.end(),
+						[] (TV a, TV b) {
+						return a.norm() < b.norm();});
+		std::cout << max_vgn.norm() << std::endl;
 		// Compute force
 		addGravity(force, mg, active_nodes, gravity);
+			cout << "addGravity" << endl;
 		addElasticity(force, xp, Fp, Vp0, mu, lambda);
-
+	cout << "addElasticity" << endl;
 		// Update velocity
 		updateGridVelocity(mg, vgn, force, active_nodes, dt, vg);
-		//
-		// Boundary conditions
-		setBoundaryVelocities(1, vg);
 
+		// std::getchar();
+			cout << "updateGridVelocity" << endl;
+		// Boundary conditions
+		setBoundaryVelocities(4, vg);
+		TV max_vn = *std::max_element(vg.begin(), vg.end(),
+            [] (TV a, TV b) {
+            return a.norm() < b.norm();});
+		std::cout << "max_vn" <<  max_vn.norm() << std::endl;
+	cout << "setBoundaryVelocities" << endl;
 		// G2P
 		// Lg = computeGridMomentum(mg, vg);
 		evolveF(dt, vg, xp, Fp);
+	cout << "evolveF" << endl;
 		transferG2P(dt, vgn, vg, 0.95, xp, vp);
+	cout << "G2P" << endl;
 		// Lp = computeParticleMomentum(mp, vp);
 		// cout << "G2P: Lp = " << endl << Lp << endl;
 		// cout << "G2P: Lg = " << endl << Lg << endl;
