@@ -37,6 +37,9 @@ public:
 	vector<TV> vp; // velocity of particle
 	vector<TSM> Fp;
 
+	// Other
+	TSM identity;
+
 	SimulationDriver() {
 		// Set values for simulation parameters
 		dt = 1e-3;
@@ -54,7 +57,7 @@ public:
 		numNode = res * res * res;
 
 		// Set values for particles
-		E = 1e4;
+		E = 10000;
 		nu = 0.3f;
 		mu = E / (2 * (1 + nu));
 		lambda = E * nu / ((1 + nu) * (1 - 2 * nu));
@@ -64,7 +67,6 @@ public:
 		Vp0 = dx * dx * dx / NpPerCell1D / NpPerCell1D / NpPerCell1D;
 		mp = vector<T>(Np, Vp0 * rho);
 		vp = vector<TV>(Np, TV::Zero());
-		TSM identity;
 		identity.setIdentity();
 		Fp = vector<TSM>(Np, identity);
 	}
@@ -137,7 +139,7 @@ public:
 	}
 
 	// Compute 1D quadratic B spline weights
- 	// x is assumed to be scaled in the index space (i.e., it is in a dx=1 grid)
+	// x is assumed to be scaled in the index space (i.e., it is in a dx=1 grid)
 
 	void computeWeights1D(TV& w, TV& dw, T& base_node, const T& x) {
 		base_node = floor(x - 0.5) + 1;
@@ -221,6 +223,98 @@ public:
 		}
 	}
 
+	void polarSVD(TSM& u, TSM& sigma, TSM& v, const TSM& F) {
+		Eigen::JacobiSVD<TSM> svd(F, Eigen::ComputeThinU | Eigen::ComputeThinV);
+		u = svd.matrixU();
+		v = svd.matrixV();
+		sigma = svd.singularValues().asDiagonal();
+
+		if (u.determinant() < 0) {
+			u(0, 2) *= -1;
+			u(1, 2) *= -1;
+			u(2, 2) *= -1;
+			sigma(2, 2) *= -1;
+		}
+
+		if (v.determinant() < 0) {
+			v(0, 2) *= -1;
+			v(1, 2) *= -1;
+			v(2, 2) *= -1;
+			sigma(2, 2) *= -1;
+		}
+	}
+
+	void fixedCorotated(const TSM& F, const T& mu, const T& lambda, TSM& P) {
+		TSM u, sigma, v;
+		polarSVD(u, sigma, v, F);
+		TSM FChanged = u * sigma * v.transpose();
+		TSM R = u * v.transpose();
+		T J = FChanged.determinant();
+		//cout << "J = " << J << endl;
+
+		TSM A = FChanged.adjoint().transpose();
+		P = 2 * mu * (F - R) + lambda * (J - 1) * A;
+	}
+
+	void addElasticity( vector<TV>& force, const vector<TV>& xp, const vector<TSM>& Fp, const T& Vp0, const T& mu, const T& lambda) {
+		//vector<TV> forceBefore = force;
+		for (int p = 0; p < Np; p++) {
+			TSM thisFp = Fp[p];
+			TSM thisP;
+			fixedCorotated(thisFp, mu, lambda, thisP);
+			TSM Vp0PFt = Vp0 * thisP * thisFp.transpose();
+
+			TV X = xp[p];
+			TV X_index_space = X / dx;
+
+			TV w1, w2, w3, dw1, dw2, dw3;
+			T base_node1, base_node2, base_node3;
+
+			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
+			computeWeights1D(w2, dw2, base_node2, X_index_space[1]);
+			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
+
+			for (int i = 0; i < 3; i++) {
+				T wi = w1[i];
+				T dwidxi = dw1[i] / dx;
+				T node_i = base_node1 + i;
+
+				for (int j = 0; j < 3; j++) {
+					T wj = w2[j];
+					T wij = wi * wj;
+					T dwijdxi = dwidxi * wj;
+					T dwijdxj = wi / dx * dw2[j];
+					T node_j = base_node2 + j;
+
+					for (int k = 0; k < 3; k++) {
+						T wk = w3[k];
+						T wijk = wij * wk;
+						T dwijkdxi = dwijdxi * wk;
+						T dwijkdxj = dwijdxj * wk;
+						T dwijkdxk = wij / dx * dw3[k];
+						T node_k = base_node3 + k;
+
+						TV grad_w = TV(dwijkdxi, dwijkdxj, dwijkdxk);
+						TV foo = -Vp0PFt * grad_w;
+
+						int idx = gridSpace2Idx(node_i, node_j, node_k);
+						if (idx > numNode) {
+							cout << "G2P: idx out of bound!" << endl;
+							cout << "node_i = " << node_i << endl;
+							cout << "node_j = " << node_j << endl;
+							cout << "node_k = " << node_k << endl;
+						}
+						// cout << "foo = " << endl << foo << endl;
+						// cout << "grad_w = " << endl << grad_w << endl;
+						// cout << "Vp0PFt = " << endl << Vp0PFt << endl;
+						// cout << "Vp0 = " << endl << Vp0 << endl;
+						force[idx] += foo;
+					}
+				}
+			}
+		}
+	}
+
 	void updateGridVelocity(const vector<T>& mg, const vector<TV>& vgn, const vector<TV>& force, const vector<int>& active_nodes, const T& dt, vector<TV>& vg) {
 		for (int i = 0; i < active_nodes.size(); i++) {
 			int idx = active_nodes[i];
@@ -229,7 +323,7 @@ public:
 	}
 
 	void setBoundaryVelocities(int thickness, vector<TV>& vg) {
-	// x direction
+		// x direction
 		for (int i = 0; i < thickness; i ++) {
 			for (int j = 0; j < res; j++) {
 				for (int k = 0; k < res; k++) {
@@ -328,6 +422,66 @@ public:
 		}
 	}
 
+	void evolveF(const T& dt, const vector<TV>& vg, const vector<TV>& xp, vector<TSM>& Fp) {
+		for (int p = 0; p < Np; p++) {
+			TSM thisFp = Fp[p];
+
+			TV X = xp[p];
+			TV X_index_space = X / dx;
+
+			TV w1, w2, w3, dw1, dw2, dw3;
+			T base_node1, base_node2, base_node3;
+
+			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
+			computeWeights1D(w2, dw2, base_node2, X_index_space[1]);
+			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
+
+			// Compute grad_vp
+			TSM grad_vp;
+			for (int i = 0; i < 3; i++) {
+				T wi = w1[i];
+				T dwidxi = dw1[i] / dx;
+				T node_i = base_node1 + i;
+
+				for (int j = 0; j < 3; j++) {
+					T wj = w2[j];
+					T wij = wi * wj;
+					T dwijdxi = dwidxi * wj;
+					T dwijdxj = wi / dx * dw2[j];
+					T node_j = base_node2 + j;
+
+					for (int k = 0; k < 3; k++) {
+						T wk = w3[k];
+						T wijk = wij * wk;
+						T dwijkdxi = dwijdxi * wk;
+						T dwijkdxj = dwijdxj * wk;
+						T dwijkdxk = wij / dx * dw3[k];
+						T node_k = base_node3 + k;
+
+						TV grad_w = TV(dwijkdxi, dwijkdxj, dwijkdxk);
+						int idx = gridSpace2Idx(node_i, node_j, node_k);
+						if (idx > numNode) {
+							cout << "G2P: idx out of bound!" << endl;
+							cout << "node_i = " << node_i << endl;
+							cout << "node_j = " << node_j << endl;
+							cout << "node_k = " << node_k << endl;
+						}
+						TV vijk = vg[idx];
+						grad_vp += vijk * grad_w.transpose();
+					}
+				}
+			}
+
+			TSM newFp = (identity + dt * grad_vp) * thisFp;
+
+			for (int i = 0; i < dim; i++) {
+				for (int j = 0; j < dim; j++) {
+					Fp[p](i, j) = newFp(i, j);
+				}
+			}
+		}
+	}
+
 	void advanceOneStep() {
 		// Init zero grid data
 		vector<T> mg = vector<T>(numNode, 0); // grid mass
@@ -345,8 +499,8 @@ public:
 
 		// Compute force
 		addGravity(force, mg, active_nodes, gravity);
-		// // addElasticity(force, xp, Fp, Vp0, mu, lambda);
-		//
+		addElasticity(force, xp, Fp, Vp0, mu, lambda);
+
 		// Update velocity
 		updateGridVelocity(mg, vgn, force, active_nodes, dt, vg);
 		//
@@ -355,7 +509,7 @@ public:
 
 		// G2P
 		// Lg = computeGridMomentum(mg, vg);
-		// // evolveF
+		evolveF(dt, vg, xp, Fp);
 		transferG2P(dt, vgn, vg, 0.95, xp, vp);
 		// Lp = computeParticleMomentum(mp, vp);
 		// cout << "G2P: Lp = " << endl << Lp << endl;
@@ -388,12 +542,12 @@ public:
 	void run(const int max_frame)
 	{
 		for(int frame=1; frame<max_frame; frame++) {
-		//for(int frame=1; frame<5; frame++) {
+			//for(int frame=1; frame<5; frame++) {
 			cout << "Frame " << frame << endl;
 
 			int N_substeps = (int)(((T)1/24)/dt);
 			for (int step = 1; step <= N_substeps; step++) {
-			//for (int step = 1; step <= 5; step++) {
+				//for (int step = 1; step <= 5; step++) {
 				// cout << "Step " << step << endl;
 				advanceOneStep();
 			}
