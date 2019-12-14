@@ -44,13 +44,13 @@ public:
 
 		// Set values for grid parameters
 		// dx = 0.02f;
-		dx = 0.1f;
+		dx = 0.05f;
 		minCorner = 0.f;
 		maxCorner = 1.f;
 		res = (maxCorner - minCorner) / dx + 1;
 		// Set values for add-on grid parameters
 		NpPerCell1D = 2.f;
-		offsetGrid = 3.f;
+		offsetGrid = 4.f;
 		numNode = res * res * res;
 
 		// Set values for particles
@@ -142,7 +142,7 @@ public:
 	void computeWeights1D(TV& w, TV& dw, T& base_node, const T& x) {
 		base_node = floor(x - 0.5) + 1;
 
-		T d0 = x - base_node+1;
+		T d0 = x - base_node + 1;
 		T z = 1.5 - d0;
 		T z2 = z * z;
 		w[0] = 0.5 * z2;
@@ -160,10 +160,11 @@ public:
 		dw[2] = zz;
 	}
 
-	void transferP2G(vector<int>& active_nodes, vector<T>& mg, vector<TV>& vg) {
+	void transferP2G(vector<T>& mg, vector<TV>& vg, vector<int>& active_nodes, const vector<TV>& xp, const vector<T>& mp, const vector<TV>& vp) {
 		for (int p = 0; p < Np; p++) {
 			TV X = xp[p];
 			TV X_index_space = X / dx;
+			// cout << X_index_space << endl;
 			TV w1, w2, w3, dw1, dw2, dw3;
 			T base_node1, base_node2, base_node3;
 			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
@@ -181,11 +182,16 @@ public:
 
 					for (int k = 0; k < 3; k++) {
 						T wijk = wij * w3[k];
-						T node_k = base_node2 + k;
+						T node_k = base_node3 + k;
 
 						// splat mass
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
-						if (idx > numNode) cout << "P2G: idx out of bounds!" << endl;
+						if (idx > numNode) {
+							cout << "P2G: idx out of bounds!" << endl;
+							cout << "P2G: node_i = " << node_i << endl;
+							cout << "P2G: node_j = " << node_j << endl;
+							cout << "P2G: node_k = " << node_k << endl;
+						}
 						mg[idx] += mp[p] * wijk;
 
 						// splat momentum
@@ -212,7 +218,6 @@ public:
 		for (int i = 0; i < active_nodes.size(); i++) {
 			int idx = active_nodes[i];
 			force[idx] += mg[idx] * gravity;
-			//cout << "mg[i] = " << mg[i] << endl;
 		}
 	}
 
@@ -302,11 +307,17 @@ public:
 
 					for (int k = 0; k < 3; k++) {
 						T wijk = wij * w3[k];
-						T node_k = base_node3 + j;
+						T node_k = base_node3 + k;
 
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
+						if (idx > numNode) {
+							cout << "G2P: idx out of bound!" << endl;
+							cout << "node_i = " << node_i << endl;
+							cout << "node_j = " << node_j << endl;
+							cout << "node_k = " << node_k << endl;
+						}
 						vpic += wijk * vg[idx];
-						vflip += wijk * vg[idx] - vgn[idx];
+						vflip += wijk * (vg[idx] - vgn[idx]);
 						sum_wijk += wijk;
 					}
 				}
@@ -326,29 +337,29 @@ public:
 		vector<int> active_nodes;
 
 		// P2G
-		TV Lp = computeParticleMomentum(mp, vp);
-		transferP2G(active_nodes, mg, vgn);
-		TV Lg = computeGridMomentum(mp, vgn);
-		cout << "P2G: Lp = " << endl << Lp << endl;
-	  cout << "P2G: Lg = " << endl << Lg << endl;
+		//TV Lp = computeParticleMomentum(mp, vp);
+		transferP2G(mg, vgn, active_nodes, xp, mp, vp);
+		//TV Lg = computeGridMomentum(mg, vgn);
+		// cout << "P2G: Lp = " << endl << Lp << endl;
+		// cout << "P2G: Lg = " << endl << Lg << endl;
 
 		// Compute force
 		addGravity(force, mg, active_nodes, gravity);
-		// addElasticity(force, xp, Fp, Vp0, mu, lambda);
-
+		// // addElasticity(force, xp, Fp, Vp0, mu, lambda);
+		//
 		// Update velocity
 		updateGridVelocity(mg, vgn, force, active_nodes, dt, vg);
-
+		//
 		// Boundary conditions
 		setBoundaryVelocities(1, vg);
 
 		// G2P
-		Lg = computeGridMomentum(mg, vg);
-		// evolveF
-		transferG2P(dt, vgn, vg, 0.95, xp,vp);
-		Lp = computeParticleMomentum(mp, vp);
-		cout << "G2P: Lg = " << endl << Lg << endl;
-		cout << "G2P: Lp = " << endl << Lp << endl;
+		// Lg = computeGridMomentum(mg, vg);
+		// // evolveF
+		transferG2P(dt, vgn, vg, 0.95, xp, vp);
+		// Lp = computeParticleMomentum(mp, vp);
+		// cout << "G2P: Lp = " << endl << Lp << endl;
+		// cout << "G2P: Lg = " << endl << Lg << endl;
 	}
 
 	void dumpPoly(string filename)
@@ -376,14 +387,14 @@ public:
 
 	void run(const int max_frame)
 	{
-		//for(int frame=1; frame<max_frame; frame++) {
-		for(int frame=1; frame<5; frame++) {
+		for(int frame=1; frame<max_frame; frame++) {
+		//for(int frame=1; frame<5; frame++) {
 			cout << "Frame " << frame << endl;
 
 			int N_substeps = (int)(((T)1/24)/dt);
-			//for (int step = 1; step <= N_substeps; step++) {
-			for (int step = 1; step <= 5; step++) {
-				cout << "Step " << step << endl;
+			for (int step = 1; step <= N_substeps; step++) {
+			//for (int step = 1; step <= 5; step++) {
+				// cout << "Step " << step << endl;
 				advanceOneStep();
 			}
 			mkdir("output/", 0777);
