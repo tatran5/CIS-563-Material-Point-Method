@@ -26,7 +26,7 @@ public:
 	std::vector<TSM> mFp;
 	int offsetNode;
 
-  	// Data structures for a Cartesian grid comprising of many nodes. 
+  	// Data structures for a Cartesian grid comprising of many nodes.
   	// (i.e. a cell is marked by 8 nodes (making up a cell (cubde)))
   	// Each node has attribute mass, velocity and position (which is known).
   	// A Node of coordinate (x, y, z) is stored at index
@@ -34,7 +34,7 @@ public:
 	std::vector<T> mNodeMass;
 	std::vector<TV> mNodePos;
 	std::vector<TV> mNodeVel;
-	
+
 	T mDistBwAdjNode; // distance between two adjacent Nodelines
 	int mNumNode1D;
 	int mNumParBwAdjNode;
@@ -64,7 +64,7 @@ public:
     		for (int yn = offsetNode; yn < mNumNode1D - 1 - offsetNode; yn++) {
     			for (int zn = offsetNode; zn < mNumNode1D - 1 - offsetNode; zn++) {
     				// a cell's location is marked by the location of its lower Node lines
-    				TV nodeLocWorld = getNodeWorldSpaceFromNodeSpace(xn, yn, zn);			    				
+    				TV nodeLocWorld = getNodeWorldSpaceFromNodeSpace(xn, yn, zn);
 
     				for (int xp = 0; xp < mNumParBwAdjNode; xp++) {
     					for (int yp = 0; yp < mNumParBwAdjNode; yp++) {
@@ -81,7 +81,7 @@ public:
     							parPos(1, 0) = nodeLocWorld(1, 0) + yp * approxDistBwPars1D + offSetY;
     							parPos(2, 0) = nodeLocWorld(2, 0) + zp * approxDistBwPars1D + offSetZ;
 
-    							mParPos.push_back(parPos); 							  
+    							mParPos.push_back(parPos);
     						}
     					}
     				}
@@ -161,20 +161,20 @@ public:
     			for (int j = 0; j < 3; j++) {
     				T w_ij = w_i * weightY(j, 0);
     				T node_j = baseNodeY + j;
-    				
+
     				for (int k = 0; k < 3; k++) {
     					T w_ijk = w_ij * weightZ(k, 0);
     					T node_k = baseNodeZ + k;
-						
+
 						int nodeIdx = getNodeIdxFromNodeSpace(node_i, node_j, node_k);
-						
+
 						// splat mass (transfer mass to Node)
 	            		mNodeMass[nodeIdx] += mParMass[p] * w_ijk;
-    					
+
 	    				// splat momentum (transfer momentum to Node)
 						pNodeVelNew->at(nodeIdx) += (w_ijk * mParMass[p]) * mParVel[p];
     					sum_w_ijk += w_ijk;
-    				    if (w_ijk < 0) std::cout << "w_ijk" << w_ijk << std::endl; 
+    				    if (w_ijk < 0) std::cout << "w_ijk" << w_ijk << std::endl;
                     }
     			}
     		}
@@ -204,12 +204,12 @@ public:
     		}
     	}
        // std::cout << "P2G 1 " << std::endl;
-        
+
     }
 
     void computeGravityOnGrid(std::vector<TV>* pForce, const std::vector<TV>& activeNodes, const TV& gravity) {
     //	std::cout << "Grav 1 " << std::endl;
-        
+
         int numActiveNodes = activeNodes.size();
     	for (int i = 0; i < numActiveNodes; i++) {
     		TV activeNode = activeNodes[i];
@@ -217,7 +217,7 @@ public:
     		pForce->at(nodeIdx) += mNodeMass[nodeIdx] * gravity;
     	}
       //  std::cout << "Grav 1 " << std::endl;
-        
+
     }
 
     void polarSVD(TSM* pU, TSM* pSigma, TSM* pV, const TSM& curFp) {
@@ -225,7 +225,7 @@ public:
         *pU = svd.matrixU();
         *pV = svd.matrixV();
         *pSigma = svd.singularValues().asDiagonal();
-        
+
         if (pU->determinant() < 0) {
             (*pU)(0, 2) *= -1;
             (*pU)(1, 2) *= -1;
@@ -251,12 +251,12 @@ public:
         // std::cout << "v: " << v.determinant() << std::endl;
         // std::cout << "j: " << j << std::endl;
         TSM a = fChanged.adjoint().transpose();
-        *pCurP = 2 * mMu * (fChanged - r) + mLambda * (j - 1) * a;                  
+        *pCurP = 2 * mMu * (fChanged - r) + mLambda * (j - 1) * a;
     }
 
     void computeElasticityOnGrid(std::vector<TV>* pForce) {
        // std::cout << "Ela 1 " << std::endl;
-        
+
         std::vector<TV> before = *pForce;
     	int numPar = mParMass.size();
         for (int p = 0; p < numPar; p++) {
@@ -276,7 +276,7 @@ public:
                 T wi = weightX(i, 0);
                 T dwi_dxi = dWeightX(i, 0) / mDistBwAdjNode;
                 T node_i = baseNodeX + i;
-                //std::cout << "wi " << wi << std::endl; 
+                //std::cout << "wi " << wi << std::endl;
 
                 for (int j = 0; j < 3; j++) {
                     T wj = weightY(j, 0);
@@ -308,13 +308,13 @@ public:
         //     std::cout << before[i] - pForce->at(i) << std::endl << std::endl;
         // }
       //  std::cout << "Ela 1 " << std::endl;
-        
+
     }
 
     void setBoundaryVelocities(int thickness) {
         //std::cout << "Bou 1 " << std::endl;
-        
-    	// send boundary velocity within thickness-range of x direction to be 0 
+
+    	// send boundary velocity within thickness-range of x direction to be 0
     	for (int i = 0; i < thickness; i++) {
     		for (int j = 0; j < mNumNode1D; j++) {
     			for (int k = 0; k < mNumNode1D; k++) {
@@ -322,7 +322,7 @@ public:
     				mNodeVel[nodeIdx] = TV::Zero();
     			}
     		}
-    	} 
+    	}
 
     	for (int i = mNumNode1D - thickness; i < mNumNode1D; i++) {
     		for (int j = 0; j < mNumNode1D; j++) {
@@ -331,9 +331,9 @@ public:
     				mNodeVel[nodeIdx] = TV::Zero();
     			}
     		}
-    	} 
+    	}
 
-    	// send boundary velocity within thickness-range of y direction to be 0 
+    	// send boundary velocity within thickness-range of y direction to be 0
     	for (int i = 0; i < mNumNode1D; i++) {
     		for (int j = 0; j < thickness; j++) {
     			for (int k = 0; k < mNumNode1D; k++) {
@@ -341,7 +341,7 @@ public:
     				mNodeVel[nodeIdx] = TV::Zero();
     			}
     		}
-    	} 
+    	}
 
     	for (int i = 0; i < mNumNode1D; i ++) {
     		for (int j = mNumNode1D - thickness; j < mNumNode1D; j ++) {
@@ -350,9 +350,9 @@ public:
     				mNodeVel[nodeIdx] = TV::Zero();
     			}
     		}
-    	} 
+    	}
 
-    	// send boundary velocity within thickness-range of z direction to be 0 
+    	// send boundary velocity within thickness-range of z direction to be 0
     	for (int i = 0; i < mNumNode1D; i++) {
     		for (int j = 0; j < mNumNode1D; j++) {
     			for (int k = 0; k < thickness; k++) {
@@ -360,7 +360,7 @@ public:
     				mNodeVel[nodeIdx] = TV::Zero();
     			}
     		}
-    	} 
+    	}
 
     	for (int i = 0; i < mNumNode1D; i++) {
     		for (int j = 0; j < mNumNode1D; j++) {
@@ -369,9 +369,9 @@ public:
     				mNodeVel[nodeIdx] = TV::Zero();
     			}
     		}
-    	} 
+    	}
       //  std::cout << "Bou 1 " << std::endl;
-        
+
 
     }
 
@@ -404,7 +404,7 @@ public:
 
     void evolveF(T dt) {
       //  std::cout << "evolve 1 " << std::endl;
-        
+
     	// evolve deformation gradient
     	int numPar = mParMass.size();
     	TSM curFp, newFp;
@@ -419,7 +419,7 @@ public:
     		TV weightX, weightY, weightZ, dWeightX, dWeightY, dWeightZ;
 
     		computeWeightsWithGradients1D(&weightX, &dWeightX, &baseNodeX, curParInNodeSpace(0, 0));
-    		computeWeightsWithGradients1D(&weightY, &dWeightY, &baseNodeY, curParInNodeSpace(1, 0));    		
+    		computeWeightsWithGradients1D(&weightY, &dWeightY, &baseNodeY, curParInNodeSpace(1, 0));
     		computeWeightsWithGradients1D(&weightZ, &dWeightZ, &baseNodeZ, curParInNodeSpace(2, 0));
 
     		// Compute grad_vp
@@ -447,7 +447,7 @@ public:
     					TV gradW = TV(dwijk_dxi, dwijk_dxj, dwijk_dxk);
     					int nodeIdx = getNodeIdxFromNodeSpace(node_i, node_j, node_k);
     					TV v_ijk = mNodeVel[nodeIdx];
-    					
+
     					gradVp += v_ijk * gradW.transpose();
     				}
     			}
@@ -459,13 +459,13 @@ public:
     			for (int j = 0; j < dim; j++) {
     				mFp[p](i, j) = newFp(i, j);
     			}
-    		} 
+    		}
     	}
       //  std::cout << "evolve 1 " << std::endl;
-        
+
     }
 
-    void updateGridVelocity(const std::vector<TV>& activeNodes, const std::vector<TV>& nodeVelNew, 
+    void updateGridVelocity(const std::vector<TV>& activeNodes, const std::vector<TV>& nodeVelNew,
     	const std::vector<TV>& force, const TV& gravity, const T& dt) {
 
 //std::cout << "update " <<std::endl;
@@ -490,7 +490,7 @@ public:
     		TV weightX, weightY, weightZ;
     		computeWeights1D(&weightX, &baseNodeX, parInNodeSpace(0, 0));
     		computeWeights1D(&weightY, &baseNodeY, parInNodeSpace(1, 0));
-    		computeWeights1D(&weightZ, &baseNodeZ, parInNodeSpace(2, 0));	
+    		computeWeights1D(&weightZ, &baseNodeZ, parInNodeSpace(2, 0));
 
     		TV vPic = TV::Zero();
     		TV vFlip = mParVel[p];
@@ -508,7 +508,7 @@ public:
     					T w_ijk = w_ij * weightZ(k, 0);
     					T node_k = baseNodeZ + k;
 
-    					int nodeIdx = getNodeIdxFromNodeSpace(node_i, node_j, node_k);    					
+    					int nodeIdx = getNodeIdxFromNodeSpace(node_i, node_j, node_k);
 						vPic += w_ijk * mNodeVel[nodeIdx];
 						vFlip += w_ijk * (mNodeVel[nodeIdx] - nodeVelNew[nodeIdx]);
 

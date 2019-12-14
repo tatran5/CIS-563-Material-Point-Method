@@ -7,11 +7,11 @@
 SHELL := /bin/bash
 RM    := rm -rf
 MKDIR := mkdir -p
-BUILDROOT := /home/tatran/Documents/CIS-563-Physically-Based-Animation-Final-Project/Build
+BUILDROOT := /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Build
 BUILDDEFAULT := Release
 RELATIVEPATH := Projects/particle
 BUILDDIR = $(BUILDROOT)/$(BUILDDEFAULT)/$(RELATIVEPATH)
-ROOTDIR := /home/tatran/Documents/CIS-563-Physically-Based-Animation-Final-Project
+ROOTDIR := /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
 BUILDTYPES := Release MinSizeRel Debug Coverage RelWithDebInfo Quick
 OTHERGOALS := $(filter-out distclean $(BUILDTYPES),$(MAKECMDGOALS))
 
