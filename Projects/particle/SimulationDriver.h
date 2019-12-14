@@ -5,6 +5,9 @@
 #include <iostream>
 #include "ParticleSystem.h"
 #include <tbb/tbb.h>
+#include "obj_loader/tiny_obj_loader.h"
+#include "mesh_query0.1/mesh_query.h"
+
 using namespace std;
 
 template<class T, int dim>
@@ -104,12 +107,20 @@ public:
 		}
 	}
 
+	void sampleParticlesInMesh() {
+		std::vector<tinyobj::shape_t> shapes;
+		std::vector<tinyobj::material_t> materials;
+		char* filename = "../../Obj/Oogie_Boogie/OogieBoogie.obj";
+		LoadObj(shapes, materials, filename);
+
+		cout << "OBJ loaded" << end;
+	}
+
 	T randWithOffset(T lo, T hi, T offset) {
 		T loWithOffset = lo + offset;
 		T hiWithOffset = hi - offset;
 		return ((hiWithOffset - loWithOffset) * ((T)rand() / RAND_MAX)) + loWithOffset;
 	}
-
 
 	TV gridSpace2WorldSpace(int x, int y, int z) {
 		TV worldSpace = TV::Zero();
@@ -527,76 +538,76 @@ public:
 		// cout << "P2G: Lp = " << endl << Lp << endl;
 		// cout << "P2G: Lg = " << endl << Lg << endl;
 		TV max_vgn = *std::max_element(vgn.begin(), vgn.end(),
-						[] (TV a, TV b) {
-						return a.norm() < b.norm();});
-		std::cout << max_vgn.norm() << std::endl;
-		// Compute force
-		addGravity(force, mg, active_nodes, gravity);
-			cout << "addGravity" << endl;
-		addElasticity(force, xp, Fp, Vp0, mu, lambda);
-	cout << "addElasticity" << endl;
-		// Update velocity
-		updateGridVelocity(mg, vgn, force, active_nodes, dt, vg);
+		[] (TV a, TV b) {
+			return a.norm() < b.norm();});
+			std::cout << max_vgn.norm() << std::endl;
+			// Compute force
+			addGravity(force, mg, active_nodes, gravity);
+			// cout << "addGravity" << endl;
+			addElasticity(force, xp, Fp, Vp0, mu, lambda);
+			// cout << "addElasticity" << endl;
+			// Update velocity
+			updateGridVelocity(mg, vgn, force, active_nodes, dt, vg);
 
-		// std::getchar();
-			cout << "updateGridVelocity" << endl;
-		// Boundary conditions
-		setBoundaryVelocities(4, vg);
-		TV max_vn = *std::max_element(vg.begin(), vg.end(),
-            [] (TV a, TV b) {
-            return a.norm() < b.norm();});
-		std::cout << "max_vn" <<  max_vn.norm() << std::endl;
-	cout << "setBoundaryVelocities" << endl;
-		// G2P
-		// Lg = computeGridMomentum(mg, vg);
-		evolveF(dt, vg, xp, Fp);
-	cout << "evolveF" << endl;
-		transferG2P(dt, vgn, vg, 0.95, xp, vp);
-	cout << "G2P" << endl;
-		// Lp = computeParticleMomentum(mp, vp);
-		// cout << "G2P: Lp = " << endl << Lp << endl;
-		// cout << "G2P: Lg = " << endl << Lg << endl;
-	}
-
-	void dumpPoly(string filename)
-	{
-		ofstream fs;
-		fs.open(filename);
-		fs << "POINTS\n";
-		int count = 0;
-		for (auto parPos : xp) {
-			fs << ++count << ":";
-			for (int i = 0; i < dim; i++){
-				if (parPos(i) != parPos(i))
-				cout << "GETTING NAN FOR PARTICLE POSITION" << endl;
-				fs << " " << parPos(i);
-			}
-			if (dim == 2)
-			fs << " 0";
-			fs << "\n";
+			// std::getchar();
+			//	cout << "updateGridVelocity" << endl;
+			// Boundary conditions
+			setBoundaryVelocities(4, vg);
+			// TV max_vn = *std::max_element(vg.begin(), vg.end(),
+			//         [] (TV a, TV b) {
+			//         return a.norm() < b.norm();});
+			// std::cout << "max_vn" <<  max_vn.norm() << std::endl;
+			//	cout << "setBoundaryVelocities" << endl;
+			// G2P
+			// Lg = computeGridMomentum(mg, vg);
+			evolveF(dt, vg, xp, Fp);
+			// cout << "evolveF" << endl;
+			transferG2P(dt, vgn, vg, 0.95, xp, vp);
+			// cout << "G2P" << endl;
+			// Lp = computeParticleMomentum(mp, vp);
+			// cout << "G2P: Lp = " << endl << Lp << endl;
+			// cout << "G2P: Lg = " << endl << Lg << endl;
 		}
-		fs << "POLYS\n";
-		count = 0;
-		fs << "END\n";
-		fs.close();
-	}
 
-	void run(const int max_frame)
-	{
-		for(int frame=1; frame<max_frame; frame++) {
-			//for(int frame=1; frame<5; frame++) {
-			cout << "Frame " << frame << endl;
-
-			int N_substeps = (int)(((T)1/24)/dt);
-			for (int step = 1; step <= N_substeps; step++) {
-				//for (int step = 1; step <= 5; step++) {
-				// cout << "Step " << step << endl;
-				advanceOneStep();
+		void dumpPoly(string filename)
+		{
+			ofstream fs;
+			fs.open(filename);
+			fs << "POINTS\n";
+			int count = 0;
+			for (auto parPos : xp) {
+				fs << ++count << ":";
+				for (int i = 0; i < dim; i++){
+					if (parPos(i) != parPos(i))
+					cout << "GETTING NAN FOR PARTICLE POSITION" << endl;
+					fs << " " << parPos(i);
+				}
+				if (dim == 2)
+				fs << " 0";
+				fs << "\n";
 			}
-			mkdir("output/", 0777);
-			string filename = "output/" + to_string(frame) + ".poly";
-			dumpPoly(filename);
-			cout << endl;
+			fs << "POLYS\n";
+			count = 0;
+			fs << "END\n";
+			fs.close();
 		}
-	}
-};
+
+		void run(const int max_frame)
+		{
+			for(int frame=1; frame<max_frame; frame++) {
+				//for(int frame=1; frame<5; frame++) {
+				cout << "Frame " << frame << endl;
+
+				int N_substeps = (int)(((T)1/24)/dt);
+				for (int step = 1; step <= N_substeps; step++) {
+					//for (int step = 1; step <= 5; step++) {
+					// cout << "Step " << step << endl;
+					advanceOneStep();
+				}
+				mkdir("output/", 0777);
+				string filename = "output/" + to_string(frame) + ".poly";
+				dumpPoly(filename);
+				cout << endl;
+			}
+		}
+	};

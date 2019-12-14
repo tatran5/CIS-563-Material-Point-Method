@@ -5,6 +5,8 @@ Projects/particle/CMakeFiles/particle.dir/main.cpp.o
  /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/ParticleSystem.h
  /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
  /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp
+ /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
+ /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/obj_loader/tiny_obj_loader.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Dense

@@ -1,0 +1,437 @@
+[
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/auxil.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/auxil.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/auxil.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/cs.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/cs.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/cs.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/ctrlc.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/ctrlc.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/ctrlc.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/kkt.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/kkt.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/kkt.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/lin_alg.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_alg.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_alg.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/lin_sys.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_sys.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_sys.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/osqp.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/osqp.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/osqp.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/polish.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/polish.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/polish.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/proj.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/proj.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/proj.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/scaling.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/scaling.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/scaling.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/src/util.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/util.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/util.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dosqp_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqp.dir/lin_sys/lib_handler.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/lib_handler.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/lib_handler.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/auxil.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/auxil.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/auxil.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/cs.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/cs.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/cs.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/ctrlc.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/ctrlc.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/ctrlc.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/kkt.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/kkt.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/kkt.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/lin_alg.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_alg.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_alg.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/lin_sys.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_sys.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/lin_sys.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/osqp.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/osqp.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/osqp.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/polish.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/polish.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/polish.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/proj.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/proj.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/proj.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/scaling.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/scaling.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/scaling.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/src/util.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/util.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/src/util.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/osqpstatic.dir/lin_sys/lib_handler.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/lib_handler.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/lib_handler.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIE   -o CMakeFiles/osqp_demo.dir/examples/osqp_demo.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/examples/osqp_demo.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/examples/osqp_demo.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_pardiso.dir/pardiso/pardiso_interface.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso/pardiso_interface.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso/pardiso_interface.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_pardiso.dir/pardiso/pardiso_loader.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso/pardiso_loader.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/pardiso/pardiso_loader.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_1.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_1.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_1.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_2.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_2.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_2.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_aat.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_aat.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_aat.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_control.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_control.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_control.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_defaults.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_defaults.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_defaults.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_info.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_info.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_info.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_order.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_order.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_order.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_post_tree.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_post_tree.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_post_tree.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_postorder.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_postorder.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_postorder.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_preprocess.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_preprocess.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_preprocess.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/amd_valid.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_valid.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/amd_valid.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/amd/src/SuiteSparse_config.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/SuiteSparse_config.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/src/SuiteSparse_config.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/amd/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/include   -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/linsys_qdldl.dir/qdldl_interface.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_interface.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_interface.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -Dqdldl_EXPORTS -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include   -O3 -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/qdldl.dir/src/qdldl.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include   -O3 -O3 -O3 -DNDEBUG -fPIE   -o CMakeFiles/qdldl_example.dir/examples/c/example.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/examples/c/example.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/examples/c/example.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include   -O3 -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/qdldlobject.dir/src/qdldl.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/include   -O3 -O3 -O3 -DNDEBUG -fPIC   -o CMakeFiles/qdldlstatic.dir/src/qdldl.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/osqp/lin_sys/direct/qdldl/qdldl_sources/src/qdldl.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glad",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/include  -O3 -DNDEBUG   -o CMakeFiles/glad.dir/src/glad.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/src/glad.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/src/glad.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/context.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/context.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/context.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/init.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/init.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/init.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/input.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/input.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/input.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/monitor.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/monitor.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/monitor.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/vulkan.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/vulkan.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/vulkan.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -Wdeclaration-after-statement -o CMakeFiles/glfw.dir/window.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/window.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/window.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/x11_init.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/x11_init.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/x11_init.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/x11_monitor.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/x11_monitor.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/x11_monitor.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/x11_window.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/x11_window.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/x11_window.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/xkb_unicode.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/xkb_unicode.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/xkb_unicode.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/posix_time.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/posix_time.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/posix_time.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/posix_thread.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/posix_thread.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/glx_context.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/glx_context.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/glx_context.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/egl_context.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/egl_context.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/egl_context.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/osmesa_context.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/osmesa_context.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src",
+  "command": "/usr/bin/cc -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -D_GLFW_USE_CONFIG_H -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/glfw/src  -O3 -DNDEBUG -fPIC   -Wall -o CMakeFiles/glfw.dir/linux_joystick.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/linux_joystick.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/src/linux_joystick.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/imgui",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG   -std=gnu++1z -o CMakeFiles/imgui.dir/imgui/imgui.cpp.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui/imgui.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui/imgui.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/imgui",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG   -std=gnu++1z -o CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui/imgui_demo.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui/imgui_demo.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/imgui",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG   -std=gnu++1z -o CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui/imgui_draw.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui/imgui_draw.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/imgui",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/include -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glfw/include   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG   -std=gnu++1z -o CMakeFiles/imgui.dir/imgui_impl_glfw_gl3.cpp.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui_impl_glfw_gl3.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui/imgui_impl_glfw_gl3.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/stb_image",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/stb_image   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG -fvisibility=hidden   -std=gnu++1z -o CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/tetgen",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -DTETLIBRARY   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG   -std=gnu++1z -o CMakeFiles/tetgen.dir/tetgen.cxx.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/tetgen",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -DTETLIBRARY   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG   -std=gnu++1z -o CMakeFiles/tetgen.dir/predicates.cxx.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/triangle",
+  "command": "/usr/bin/cc -DANSI_DECLARATORS -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -DTRILIBRARY  -O3 -DNDEBUG   -o CMakeFiles/triangle.dir/triangle.c.o   -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.c",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.c"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/BGEO.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/BGEO.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/BGEO.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/BIN.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/BIN.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/BIN.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/GEO.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/GEO.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/GEO.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/MC.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/MC.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/MC.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/PDA.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PDA.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PDA.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/PDB.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PDB.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PDB.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/PDC.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PDC.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PDC.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/PTC.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PTC.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PTC.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/PTS.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PTS.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/PTS.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/ParticleIO.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/ParticleIO.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/ParticleIO.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/RIB.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/RIB.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/RIB.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/io/ZIP.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/ZIP.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/io/ZIP.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/core/Particle.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/Particle.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/Particle.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/core/ParticleCaching.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleCaching.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleCaching.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/core/ParticleHeaders.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleHeaders.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleHeaders.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/core/ParticleSimple.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleSimple.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleSimple.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-build/src/lib",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/src/lib  -fPIC -O3 -DNDEBUG   -Wextra -Wno-unused-parameter -std=gnu++1z -o CMakeFiles/partio.dir/core/ParticleSimpleInterleave.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleSimpleInterleave.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/partio-src/src/lib/core/ParticleSimpleInterleave.cpp"
+},
+{
+  "directory": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Projects/particle",
+  "command": "/usr/bin/c++  -DCISPBA_PLUGIN_DIR=\\\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/mesh_query0.1/Plugins\\\" -isystem /usr/include/eigen3   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -O3 -DNDEBUG   -std=gnu++1z -o CMakeFiles/particle.dir/main.cpp.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp",
+  "file": "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp"
+}
+]
