@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles/partio-download"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles/partio-download.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles/partio-download-complete.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-install.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-mkdir.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-download.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-patch.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-configure.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-build.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-test.rule"
+		},
+		{
+			"file" : "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/partio-download-prefix/src/partio-download-stamp/partio-download-skip-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"partio-download"
+		],
+		"name" : "partio-download"
+	}
+}

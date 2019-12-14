@@ -1,0 +1,2 @@
+/usr/bin/gcc-ar qc libigl_stb_image.a  CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o
+/usr/bin/gcc-ranlib libigl_stb_image.a

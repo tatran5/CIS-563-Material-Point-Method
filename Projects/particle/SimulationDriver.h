@@ -1,10 +1,11 @@
-
 #include <Eigen/Sparse>
 #include <unsupported/Eigen/IterativeSolvers>
 
 #include <sys/stat.h>
 #include <iostream>
 #include "ParticleSystem.h"
+
+using namespace std;
 
 template<class T, int dim>
 class SimulationDriver{
@@ -26,14 +27,15 @@ public:
 	// Add-on grid parameters
 	T NpPerCell1D;
 	T offsetGrid; // so that particles are only sampled within a smaller grid
+	T numNode;
 
 	// Particle parameters
 	T E; //elasticity
 	T nu, mu, lambda, rho, Np, Vp0;
-	std::vector<TV> xp; // position of particle
-	std::vector<T> mp; // mass of particle
-	std::vector<TV> vp; // velocity of particle
-	std::vector<TSM> Fp;
+	vector<TV> xp; // position of particle
+	vector<T> mp; // mass of particle
+	vector<TV> vp; // velocity of particle
+	vector<TSM> Fp;
 
 	SimulationDriver() {
 		// Set values for simulation parameters
@@ -49,6 +51,7 @@ public:
 		// Set values for add-on grid parameters
 		NpPerCell1D = 2.f;
 		offsetGrid = 3.f;
+		numNode = res * res * res;
 
 		// Set values for particles
 		E = 1e4;
@@ -56,15 +59,14 @@ public:
 		mu = E / (2 * (1 + nu));
 		lambda = E * nu / ((1 + nu) * (1 - 2 * nu));
 		rho = 1000;
+		sampleParticles();
 		Np = xp.size();
 		Vp0 = dx * dx * dx / NpPerCell1D / NpPerCell1D / NpPerCell1D;
-		mp = std::vector<T>(Np, Vp0 * rho);
-		vp = std::vector<TV>(Np, TV::Zero());
+		mp = vector<T>(Np, Vp0 * rho);
+		vp = vector<TV>(Np, TV::Zero());
 		TSM identity;
 		identity.setIdentity();
-		Fp = std::vector<TSM>(Np, identity);
-
-		sampleParticles();
+		Fp = vector<TSM>(Np, identity);
 	}
 
 	void sampleParticles() {
@@ -73,9 +75,9 @@ public:
 			for (int cy = offsetGrid; cy < res - 1 - offsetGrid; cy++) {
 				for (int cz = offsetGrid; cz < res - 1 - offsetGrid; cz++) {
 					TV cellWorldSpace = gridSpace2WorldSpace(cx, cy, cz);
-					// std::cout << "c0 " << cellWorldSpace[0] << std::endl;
-					// std::cout << "c1 " << cellWorldSpace[1] << std::endl;
-					// std::cout << "c2 " << cellWorldSpace[2] << std::endl;
+					// cout << "c0 " << cellWorldSpace[0] << endl;
+					// cout << "c1 " << cellWorldSpace[1] << endl;
+					// cout << "c2 " << cellWorldSpace[2] << endl;
 					for (int px = 0; px < NpPerCell1D; px++) {
 						for (int py = 0; py < NpPerCell1D; py++) {
 							for (int pz = 0; pz < NpPerCell1D; pz++) {
@@ -88,9 +90,9 @@ public:
 								parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D + offsetY;
 								parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D + offsetZ;
 								xp.push_back(parPos);
-								// std::cout << "p0 " << parPos[0] << std::endl;
-								// std::cout << "p1 " << parPos[1] << std::endl;
-								// std::cout << "p2 " << parPos[2] << std::endl;
+								// cout << "p0 " << parPos[0] << endl;
+								// cout << "p1 " << parPos[1] << endl;
+								// cout << "p2 " << parPos[2] << endl;
 							}
 						}
 					}
@@ -102,7 +104,7 @@ public:
 	T randWithOffset(T lo, T hi, T offset) {
 		T loWithOffset = lo + offset;
 		T hiWithOffset = hi - offset;
-		return ((hiWithOffset - loWithOffset) * ((T)std::rand() / RAND_MAX)) + loWithOffset;
+		return ((hiWithOffset - loWithOffset) * ((T)rand() / RAND_MAX)) + loWithOffset;
 	}
 
 
@@ -114,7 +116,11 @@ public:
 		return worldSpace;
 	}
 
-	TV computeParticleMomentum(const std::vector<T> &mp, const std::vector<TV> &vp) {
+	int gridSpace2Idx(int x, int y, int z) {
+		return x + y * res + z * res * res;
+	}
+
+	TV computeParticleMomentum(const vector<T> &mp, const vector<TV> &vp) {
 		TV result = TV::Zero();
 		for (int p = 0; p < Np; p++) {
 			result += mp[p] * vp[p];
@@ -122,36 +128,49 @@ public:
 		return result;
 	}
 
-	void advanceOneStep() {
-		// Init zero grid data
-		int numNode = res * res * res;
-		std::vector<T> mg = std::vector<T>(numNode, 0); // grid mass
-		std::vector<TV> vgn = std::vector<TV>(numNode, TV::Zero()); // grid new velocity
-		std::vector<TV> vg = std::vector<TV>(numNode, TV::Zero()); // grid old velocity
-		std::vector<TV> force = std::vector<TV>(numNode, TV::Zero());
-
-		// P2G
-		TV Lp = computeParticleMomentum(mp, vp);
-		transferP2G(vgn);
-
+	TV computeGridMomentum(const vector<T> &mg, const vector<TV>& vg) {
+		TV result = TV::Zero();
+		for (int i = 0; i < numNode; i++) {
+			result += mg[i] * vg[i];
+		}
+		return result;
 	}
 
-	// X is location of a particle in grid space
-	void computeWeights1D(TV& w, T& base_node, const T& x) {
-		T base_node = std::floor(x - 0.5f) + 1;
+	// Compute 1D quadratic B spline weights
+ 	// x is assumed to be scaled in the index space (i.e., it is in a dx=1 grid)
 
+	void computeWeights1D(TV& w, TV& dw, T& base_node, const T& x) {
+		base_node = floor(x - 0.5) + 1;
+
+		T d0 = x - base_node+1;
+		T z = 1.5 - d0;
+		T z2 = z * z;
+		w[0] = 0.5 * z2;
+
+		T d1 = d0 - 1;
+		w[1] = 0.75 - d1 * d1;
+
+		T d2 = 1 - d1;
+		T zz = 1.5 - d2;
+		T zz2 = zz * zz;
+		w[2] = 0.5 * zz2;
+
+		dw[0] = -z;
+		dw[1] = -2 * d1;
+		dw[2] = zz;
 	}
 
-	void transferP2G(std::vector<TV>& vg) {
+	void transferP2G(vector<int>& active_nodes, vector<T>& mg, vector<TV>& vg) {
 		for (int p = 0; p < Np; p++) {
 			TV X = xp[p];
 			TV X_index_space = X / dx;
-			TV w1, w2, w3;
+			TV w1, w2, w3, dw1, dw2, dw3;
 			T base_node1, base_node2, base_node3;
-			computeWeights1D(X_index_space[0]);
-			computeWeights1D(X_index_space[1]);
-			computeWeights1D(X_index_space[2]);
+			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
+			computeWeights1D(w2, dw2, base_node2, X_index_space[1]);
+			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
 
+			T sum_wijk = 0;
 			for (int i = 0; i < 3; i++) {
 				T wi = w1[i];
 				T node_i = base_node1 + i;
@@ -162,16 +181,179 @@ public:
 
 					for (int k = 0; k < 3; k++) {
 						T wijk = wij * w3[k];
+						T node_k = base_node2 + k;
 
+						// splat mass
+						int idx = gridSpace2Idx(node_i, node_j, node_k);
+						if (idx > numNode) cout << "P2G: idx out of bounds!" << endl;
+						mg[idx] += mp[p] * wijk;
+
+						// splat momentum
+						vg[idx] += wijk * mp[p] * vp[p];
+
+						sum_wijk += wijk;
 					}
+				}
+			}
+			// cout << "sum_wijk = " << sum_wijk << endl;
+		}
+
+		for (int i = 0; i < numNode; i++) {
+			if (mg[i] != 0) {
+				active_nodes.push_back(i);
+				vg[i] /= mg[i];
+			} else {
+				vg[i] = TV::Zero();
+			}
+		}
+	}
+
+	void addGravity(vector<TV>& force, const vector<T>& mg, const vector<int>& active_nodes, const TV& gravity) {
+		for (int i = 0; i < active_nodes.size(); i++) {
+			int idx = active_nodes[i];
+			force[idx] += mg[idx] * gravity;
+			//cout << "mg[i] = " << mg[i] << endl;
+		}
+	}
+
+	void updateGridVelocity(const vector<T>& mg, const vector<TV>& vgn, const vector<TV>& force, const vector<int>& active_nodes, const T& dt, vector<TV>& vg) {
+		for (int i = 0; i < active_nodes.size(); i++) {
+			int idx = active_nodes[i];
+			vg[idx] = vgn[idx] + dt * force[idx] / mg[idx];
+		}
+	}
+
+	void setBoundaryVelocities(int thickness, vector<TV>& vg) {
+	// x direction
+		for (int i = 0; i < thickness; i ++) {
+			for (int j = 0; j < res; j++) {
+				for (int k = 0; k < res; k++) {
+					vg[gridSpace2Idx(i, j, k)] = TV::Zero();
+				}
+			}
+		}
+
+		for (int i = res - thickness; i < res; i ++) {
+			for (int j = 0; j < res; j++) {
+				for (int k = 0; k < res; k++) {
+					vg[gridSpace2Idx(i, j, k)] = TV::Zero();
+				}
+			}
+		}
+
+		// y direction
+		for (int i = 0; i < res; i ++) {
+			for (int j = 0; j < thickness; j++) {
+				for (int k = 0; k < res; k++) {
+					vg[gridSpace2Idx(i, j, k)] = TV::Zero();
+				}
+			}
+		}
+
+		for (int i = 0; i < res; i ++) {
+			for (int j = res - thickness; j < res; j++) {
+				for (int k = 0; k < res; k++) {
+					vg[gridSpace2Idx(i, j, k)] = TV::Zero();
+				}
+			}
+		}
+
+		// z direction
+		for (int i = 0; i < res; i ++) {
+			for (int j = 0; j < res; j++) {
+				for (int k = 0; k < thickness; k++) {
+					vg[gridSpace2Idx(i, j, k)] = TV::Zero();
+				}
+			}
+		}
+
+		for (int i = 0; i < res; i ++) {
+			for (int j = 0; j < res; j++) {
+				for (int k = res - thickness; k < res; k++) {
+					vg[gridSpace2Idx(i, j, k)] = TV::Zero();
 				}
 			}
 		}
 	}
 
-	void dumpPoly(std::string filename)
+	void transferG2P(const T& dt, const vector<TV>& vgn, const vector<TV>& vg, const T& flip, vector<TV>& xp, vector<TV>& vp) {
+		for (int p = 0; p < Np; p++) {
+			TV X = xp[p];
+			TV X_index_space = X / dx;
+			TV w1, w2, w3, dw1, dw2, dw3;
+			T base_node1, base_node2, base_node3;
+
+			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
+			computeWeights1D(w2, dw2, base_node2, X_index_space[1]);
+			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
+
+			TV vpic = TV::Zero();
+			TV vflip = vp[p];
+
+			T sum_wijk = 0;
+
+			for (int i = 0; i < 3; i++) {
+				T wi = w1[i];
+				T node_i = base_node1 + i;
+
+				for(int j = 0; j < 3; j++) {
+					T wij = wi * w2[j];
+					T node_j = base_node2 + j;
+
+					for (int k = 0; k < 3; k++) {
+						T wijk = wij * w3[k];
+						T node_k = base_node3 + j;
+
+						int idx = gridSpace2Idx(node_i, node_j, node_k);
+						vpic += wijk * vg[idx];
+						vflip += wijk * vg[idx] - vgn[idx];
+						sum_wijk += wijk;
+					}
+				}
+			}
+			// cout << "sum_wijk = " << sum_wijk << endl;
+			vp[p] = (1 - flip) * vpic + flip * vflip;
+			xp[p] += dt * vpic;
+		}
+	}
+
+	void advanceOneStep() {
+		// Init zero grid data
+		vector<T> mg = vector<T>(numNode, 0); // grid mass
+		vector<TV> vgn = vector<TV>(numNode, TV::Zero()); // grid new velocity
+		vector<TV> vg = vector<TV>(numNode, TV::Zero()); // grid old velocity
+		vector<TV> force = vector<TV>(numNode, TV::Zero());
+		vector<int> active_nodes;
+
+		// P2G
+		TV Lp = computeParticleMomentum(mp, vp);
+		transferP2G(active_nodes, mg, vgn);
+		TV Lg = computeGridMomentum(mp, vgn);
+		cout << "P2G: Lp = " << endl << Lp << endl;
+	  cout << "P2G: Lg = " << endl << Lg << endl;
+
+		// Compute force
+		addGravity(force, mg, active_nodes, gravity);
+		// addElasticity(force, xp, Fp, Vp0, mu, lambda);
+
+		// Update velocity
+		updateGridVelocity(mg, vgn, force, active_nodes, dt, vg);
+
+		// Boundary conditions
+		setBoundaryVelocities(1, vg);
+
+		// G2P
+		Lg = computeGridMomentum(mg, vg);
+		// evolveF
+		transferG2P(dt, vgn, vg, 0.95, xp,vp);
+		Lp = computeParticleMomentum(mp, vp);
+		cout << "G2P: Lg = " << endl << Lg << endl;
+		cout << "G2P: Lp = " << endl << Lp << endl;
+	}
+
+	void dumpPoly(string filename)
 	{
-		std::ofstream fs;
+		ofstream fs;
 		fs.open(filename);
 		fs << "POINTS\n";
 		int count = 0;
@@ -179,7 +361,7 @@ public:
 			fs << ++count << ":";
 			for (int i = 0; i < dim; i++){
 				if (parPos(i) != parPos(i))
-				std::cout << "GETTING NAN FOR PARTICLE POSITION" << std::endl;
+				cout << "GETTING NAN FOR PARTICLE POSITION" << endl;
 				fs << " " << parPos(i);
 			}
 			if (dim == 2)
@@ -196,18 +378,18 @@ public:
 	{
 		//for(int frame=1; frame<max_frame; frame++) {
 		for(int frame=1; frame<5; frame++) {
-			std::cout << "Frame " << frame << std::endl;
+			cout << "Frame " << frame << endl;
 
 			int N_substeps = (int)(((T)1/24)/dt);
 			//for (int step = 1; step <= N_substeps; step++) {
 			for (int step = 1; step <= 5; step++) {
-				std::cout << "Step " << step << std::endl;
+				cout << "Step " << step << endl;
 				advanceOneStep();
 			}
 			mkdir("output/", 0777);
-			std::string filename = "output/" + std::to_string(frame) + ".poly";
+			string filename = "output/" + to_string(frame) + ".poly";
 			dumpPoly(filename);
-			std::cout << std::endl;
+			cout << endl;
 		}
 	}
 };

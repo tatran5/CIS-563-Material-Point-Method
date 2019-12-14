@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa778/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fa778.dir/build.make CMakeFiles/cmTC_fa778.dir/build
+make[1]: Entering directory '/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fa778.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno    -o CMakeFiles/cmTC_fa778.dir/CheckSymbolExists.cxx.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_fa778
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa778.dir/link.txt --verbose=1
+/usr/bin/c++   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno     -rdynamic CMakeFiles/cmTC_fa778.dir/CheckSymbolExists.cxx.o  -o cmTC_fa778 
+CMakeFiles/cmTC_fa778.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fa778.dir/build.make:97: recipe for target 'cmTC_fa778' failed
+make[1]: *** [cmTC_fa778] Error 1
+make[1]: Leaving directory '/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fa778/fast' failed
+make: *** [cmTC_fa778/fast] Error 2
+
+File /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_94152/fast"
+/usr/bin/make -f CMakeFiles/cmTC_94152.dir/build.make CMakeFiles/cmTC_94152.dir/build
+make[1]: Entering directory '/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_94152.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_94152.dir/CheckFunctionExists.cxx.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_94152
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94152.dir/link.txt --verbose=1
+/usr/bin/c++   -Wno-reorder -Wno-sign-compare -Wno-format-nonliteral -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable -Wno-maybe-uninitialized -fPIC -Wall -Werror=all -Wextra -Wno-unused-parameter -Wcast-align -Wformat=2 -Winit-self -Wmissing-include-dirs -Woverloaded-virtual -Wredundant-decls -march=native -fno-math-errno -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_94152.dir/CheckFunctionExists.cxx.o  -o cmTC_94152 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_94152.dir/build.make:97: recipe for target 'cmTC_94152' failed
+make[1]: *** [cmTC_94152] Error 1
+make[1]: Leaving directory '/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_94152/fast' failed
+make: *** [cmTC_94152/fast] Error 2
+
+
