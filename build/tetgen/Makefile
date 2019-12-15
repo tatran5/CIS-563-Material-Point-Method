@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
+CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build
+CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen/CMakeFiles/progress.marks
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen/CMakeFiles/progress.marks
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/clean
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/preinstall
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/preinstall
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tetgen/CMakeFiles/tetgen.dir/rule:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/CMakeFiles/tetgen.dir/rule
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 tetgen/CMakeFiles/tetgen.dir/rule
 .PHONY : tetgen/CMakeFiles/tetgen.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ tetgen: tetgen/CMakeFiles/tetgen.dir/rule
 
 # fast build rule for target.
 tetgen/fast:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/build
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/build
 .PHONY : tetgen/fast
 
 predicates.o: predicates.cxx.o
@@ -188,7 +188,7 @@ predicates.o: predicates.cxx.o
 
 # target to build an object file
 predicates.cxx.o:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o
 .PHONY : predicates.cxx.o
 
 predicates.i: predicates.cxx.i
@@ -197,7 +197,7 @@ predicates.i: predicates.cxx.i
 
 # target to preprocess a source file
 predicates.cxx.i:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/predicates.cxx.i
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/predicates.cxx.i
 .PHONY : predicates.cxx.i
 
 predicates.s: predicates.cxx.s
@@ -206,7 +206,7 @@ predicates.s: predicates.cxx.s
 
 # target to generate assembly for a file
 predicates.cxx.s:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/predicates.cxx.s
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/predicates.cxx.s
 .PHONY : predicates.cxx.s
 
 tetgen.o: tetgen.cxx.o
@@ -215,7 +215,7 @@ tetgen.o: tetgen.cxx.o
 
 # target to build an object file
 tetgen.cxx.o:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o
 .PHONY : tetgen.cxx.o
 
 tetgen.i: tetgen.cxx.i
@@ -224,7 +224,7 @@ tetgen.i: tetgen.cxx.i
 
 # target to preprocess a source file
 tetgen.cxx.i:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.i
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.i
 .PHONY : tetgen.cxx.i
 
 tetgen.s: tetgen.cxx.s
@@ -233,7 +233,7 @@ tetgen.s: tetgen.cxx.s
 
 # target to generate assembly for a file
 tetgen.cxx.s:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.s
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.s
 .PHONY : tetgen.cxx.s
 
 # Help Target
@@ -267,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

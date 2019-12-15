@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
+CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build
+CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -140,14 +140,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-build/CMakeFiles/progress.marks
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-build/CMakeFiles/progress.marks
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/clean
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -157,17 +157,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/preinstall
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/preinstall
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 partio-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -194,6 +194,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

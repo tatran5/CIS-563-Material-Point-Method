@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
+CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build
+CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build
 
 # Utility rule file for SuiteSparse.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/
 include CMakeFiles/SuiteSparse.dir/progress.make
 
 CMakeFiles/SuiteSparse:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/SuiteSparse && make library -j 8
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/SuiteSparse && make library -j 8
 
 SuiteSparse: CMakeFiles/SuiteSparse
 SuiteSparse: CMakeFiles/SuiteSparse.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/SuiteSparse.dir/clean:
 .PHONY : CMakeFiles/SuiteSparse.dir/clean
 
 CMakeFiles/SuiteSparse.dir/depend:
-	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/SuiteSparse.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles/SuiteSparse.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SuiteSparse.dir/depend
 

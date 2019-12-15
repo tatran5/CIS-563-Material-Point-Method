@@ -1,4 +1,4 @@
-# Install script for directory: /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps
+# Install script for directory: /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-build/cmake_install.cmake")
+  include("/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-build/cmake_install.cmake")
 
 endif()
 

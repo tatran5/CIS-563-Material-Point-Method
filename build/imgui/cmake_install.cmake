@@ -1,4 +1,4 @@
-# Install script for directory: /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui
+# Install script for directory: /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/imgui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

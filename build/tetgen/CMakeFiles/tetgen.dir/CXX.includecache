@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx
 stdio.h
 -
 stdlib.h
@@ -18,15 +18,15 @@ float.h
 fpu_control.h
 -
 tetgen.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.h
 CGAL/Exact_predicates_inexact_constructions_kernel.h
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx
 tetgen.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.h
 stdio.h
 -
 stdlib.h

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 string
 -
 vector
@@ -16,13 +16,13 @@ map
 stdint.h
 -
 PartioAttribute.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioAttribute.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioAttribute.h
 PartioIterator.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioIterator.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioIterator.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioAttribute.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioAttribute.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioIterator.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioIterator.h
 cassert
 -
 vector
@@ -30,9 +30,9 @@ vector
 iostream
 -
 PartioAttribute.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioAttribute.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/PartioAttribute.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/KdTree.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/KdTree.h
 string.h
 -
 vector
@@ -44,17 +44,17 @@ algorithm
 cassert
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
 pthread.h
 -
 windows.h
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Particle.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Particle.cpp
 ParticleSimple.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.h
 ParticleSimpleInterleave.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.h
 iostream
 -
 string
@@ -62,21 +62,21 @@ string
 cassert
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.cpp
 iostream
 -
 cassert
 -
 Mutex.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.cpp
 ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 map
 -
 algorithm
@@ -86,15 +86,15 @@ cassert
 iostream
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.cpp
 ParticleSimple.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.h
 ParticleCaching.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.h
 map
 -
 algorithm
@@ -104,9 +104,9 @@ cassert
 iostream
 -
 KdTree.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/KdTree.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/KdTree.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimple.h
 string
 -
 vector
@@ -116,15 +116,15 @@ map
 set
 -
 Mutex.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.cpp
 ParticleSimpleInterleave.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.h
 ParticleCaching.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleCaching.h
 map
 -
 algorithm
@@ -134,9 +134,9 @@ cassert
 iostream
 -
 KdTree.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/KdTree.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/KdTree.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleSimpleInterleave.h
 string
 -
 vector
@@ -144,19 +144,19 @@ vector
 map
 -
 Mutex.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/Mutex.h
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/BGEO.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/BGEO.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 PartioEndian.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -166,15 +166,15 @@ string
 memory
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/BIN.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/BIN.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 PartioEndian.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -184,13 +184,13 @@ string
 memory
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/GEO.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/GEO.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -202,15 +202,15 @@ cassert
 memory
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/MC.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/MC.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 PartioEndian.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -222,13 +222,13 @@ cassert
 memory
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PDA.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PDA.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -240,17 +240,17 @@ cassert
 memory
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PDB.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PDB.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 pdb.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/pdb.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/pdb.h
 PartioEndian.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -264,15 +264,15 @@ memory
 string.h
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PDC.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PDC.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 PartioEndian.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -282,17 +282,17 @@ string
 memory
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PTC.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PTC.cpp
 cmath
 -
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 PartioEndian.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -306,13 +306,13 @@ memory
 sstream
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PTS.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PTS.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 sstream
@@ -328,27 +328,27 @@ memory
 cstring
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ParticleIO.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ParticleIO.cpp
 iostream
 -
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 readers.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/readers.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/readers.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/PartioEndian.h
 cassert
 -
 iostream
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/RIB.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/RIB.cpp
 ../Partio.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/Partio.h
 ../core/ParticleHeaders.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/core/ParticleHeaders.h
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 iostream
 -
 fstream
@@ -360,7 +360,7 @@ cassert
 memory
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.cpp
 zlib.h
 -
 cassert
@@ -378,9 +378,9 @@ cstring
 string
 -
 ZIP.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/ZIP.h
 fstream
 -
 iostream
@@ -392,7 +392,7 @@ stdexcept
 vector
 -
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/pdb.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/pdb.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/readers.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-src/src/lib/io/readers.h
 

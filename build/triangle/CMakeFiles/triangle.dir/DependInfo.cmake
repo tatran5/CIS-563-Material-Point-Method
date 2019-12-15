@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.c" "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/triangle/CMakeFiles/triangle.dir/triangle.c.o"
+  "/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.c" "/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/triangle/CMakeFiles/triangle.dir/triangle.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
   "ANSI_DECLARATORS"
-  "CISPBA_PLUGIN_DIR=\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/Plugins\""
+  "CISPBA_PLUGIN_DIR=\"/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/Plugins\""
   "TRILIBRARY"
   )
 

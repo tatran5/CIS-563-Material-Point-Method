@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/ParticleSystem.h
-Eigen/Core
--
-Eigen/Dense
--
-vector
--
-string
--
-fstream
--
-
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
+tiny_obj_loader.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/tiny_obj_loader.h
+mesh_query0.1/mesh_query.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
 Eigen/Sparse
 -
 unsupported/Eigen/IterativeSolvers
@@ -27,16 +19,10 @@ sys/stat.h
 -
 iostream
 -
-ParticleSystem.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/ParticleSystem.h
 tbb/tbb.h
 -
-obj_loader/tiny_obj_loader.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/obj_loader/tiny_obj_loader.h
-mesh_query0.1/mesh_query.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp
 Eigen/Core
 -
 Eigen/Dense
@@ -56,16 +42,36 @@ random
 chrono
 -
 SimulationDriver.h
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
 
-/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/obj_loader/tiny_obj_loader.h
+/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/tiny_obj_loader.h
+map
+-
 string
 -
 vector
 -
-map
+cassert
+-
+cctype
+-
+cmath
+-
+cstddef
+-
+cstdlib
+-
+cstring
+-
+limits
+-
+utility
+-
+fstream
+-
+sstream
 -
 
 /usr/include/eigen3/Eigen/Cholesky

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS = -O3 -DNDEBUG  
 
-C_DEFINES = -DCISPBA_PLUGIN_DIR=\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/Plugins\"
+C_DEFINES = -DCISPBA_PLUGIN_DIR=\"/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/Plugins\"
 
-C_INCLUDES = -I/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/include 
+C_INCLUDES = -I/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/include 
 
