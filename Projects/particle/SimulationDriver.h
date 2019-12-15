@@ -43,7 +43,6 @@ public:
 	vector<TSM> Fp;
 
 	// Other
-	TSM identity;
 
 	SimulationDriver() {
 		cout << "SimulationDriver called" << endl;
@@ -54,29 +53,28 @@ public:
 
 		// Set values for grid parameters
 		// dx = 0.02f;
-		dx = 0.05f;
+		dx = 0.02f;
 		minCorner = 0.f;
 		maxCorner = 1.f;
 		res = (maxCorner - minCorner) / dx + 1;
 		// Set values for add-on grid parameters
-		NpPerCell1D = 2.f;
+		NpPerCell1D = 3.f;
 		offsetGrid = 8.f;
 		numNode = res * res * res;
 
 		// Set values for particles
-		E = 10000;
+		E = 100000;
 		nu = 0.3f;
 		mu = E / (2 * (1 + nu));
 		lambda = E * nu / ((1 + nu) * (1 - 2 * nu));
 		rho = 1000;
-		//sampleParticles();
-		sampleParticlesInMesh();
+		sampleParticles();
+		//sampleParticlesInMesh();
 		Np = xp.size();
 		Vp0 = dx * dx * dx / NpPerCell1D / NpPerCell1D / NpPerCell1D;
 		mp = vector<T>(Np, Vp0 * rho);
 		vp = vector<TV>(Np, TV::Zero());
-		identity.setIdentity();
-		Fp = vector<TSM>(Np, identity);
+		Fp = vector<TSM>(Np, TSM::Identity());
 		cout << "Np = " << Np <<endl;
 		cout << "res = " << res << endl;
 		cout << "numNode = " << numNode << endl;
@@ -96,9 +94,9 @@ public:
 								T offsetZ = randWithOffset(0, estDistBwPars1D, 0.000001f);
 
 								TV parPos = TV::Zero();
-								parPos[0] = cellWorldSpace[0] + px * estDistBwPars1D;// + offsetX;
-								parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D;// + offsetY;
-								parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D;// + offsetZ;
+								parPos[0] = cellWorldSpace[0] + px * estDistBwPars1D + offsetX;
+								parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D + offsetY;
+								parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D + offsetZ;
 								xp.push_back(parPos);
 								// cout << "p0 " << parPos[0] << endl;
 								// cout << "p1 " << parPos[1] << endl;
@@ -160,20 +158,56 @@ public:
 			T widthX = largestX - smallestX;
 			T widthY = largestY - smallestY;
 			T widthZ = largestZ - smallestZ;
-			T scale = maxValueFromThree(widthX, widthY, widthZ) * 2;
+			T scale = 1.f / (maxValueFromThree(widthX, widthY, widthZ) * 2.f);
 
 			mesh_t mesh = shapes[0].mesh;
 
 			int numVertices = vertices.size();
 			double meshObjectPositions[numVertices];
-			for (int i = 0; i < numVertices; i++) meshObjectPositions[i] = vertices[i];
+			for (int i = 0; i < numVertices; i++) {
+				if (i % 3 == 0) meshObjectPositions[i] = (vertices[i] - smallestX) * scale;
+				else if (i % 3 == 1) meshObjectPositions[i] = (vertices[i] - smallestY) * scale;
+				else meshObjectPositions[i] = (vertices[i] - smallestZ) * scale;
+			}
 
 			int numTriangles = mesh.indices.size();
 			int meshObjectTriangles[numTriangles];
 			for (int i = 0; i < numTriangles; i++) meshObjectTriangles[i] = mesh.indices[i].vertex_index;
+			/*
 			MeshObject* pMeshObject = construct_mesh_object(numVertices, &meshObjectPositions[0], numTriangles, &meshObjectTriangles[0]);
+
+			T estDistBwPars1D = dx / NpPerCell1D;
+			for (int cx = offsetGrid; cx < res - 1 - offsetGrid; cx++) {
+				for (int cy = offsetGrid; cy < res - 1 - offsetGrid; cy++) {
+					for (int cz = offsetGrid; cz < res - 1 - offsetGrid; cz++) {
+						TV cellWorldSpace = gridSpace2WorldSpace(cx, cy, cz);
+						for (int px = 0; px < NpPerCell1D; px++) {
+							for (int py = 0; py < NpPerCell1D; py++) {
+								for (int pz = 0; pz < NpPerCell1D; pz++) {
+									T offsetX = randWithOffset(0, estDistBwPars1D, 0.000001f);
+									T offsetY = randWithOffset(0, estDistBwPars1D, 0.000001f);
+									T offsetZ = randWithOffset(0, estDistBwPars1D, 0.000001f);
+
+									TV parPos = TV::Zero();
+									parPos[0] = cellWorldSpace[0] + px * estDistBwPars1D;// + offsetX;
+									parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D;// + offsetY;
+									parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D;// + offsetZ;
+
+									double testPoint = [parPos[0], parPos[1], parPos[2]];
+									if (point_inside_mesh(testPoint, pMeshObject)) {
+										xp.push_back(parPos);
+										// cout << "p0 " << parPos[0] << endl;
+										// cout << "p1 " << parPos[1] << endl;
+										// cout << "p2 " << parPos[2] << endl;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			*/
 		}
-		std::getchar();
 	}
 
 	T maxValueFromThree(T a, T b, T c) {
@@ -342,27 +376,18 @@ public:
 	void fixedCorotated(TSM& F, const T& mu, const T& lambda, TSM& P) {
 		TSM u, sigma, v;
 		polarSVD(u, sigma, v, F);
-		// F = u * sigma * v.transpose();
-		//TSM FChanged = u * sigma * v.transpose();
 		TSM R = u * v.transpose();
-		//T J = FChanged.determinant();
-
 		T J = F.determinant();
-		// cout << "J = " << J << endl;
-
-		//TSM A = FChanged.adjoint().transpose();
 		TSM A = J * F.inverse().transpose();
 		P = T(2) * mu * (F - R) + lambda * (J - 1) * A;
 	}
 
 	void addElasticity( vector<TV>& force, const vector<TV>& xp, const vector<TSM>& Fp, const T& Vp0, const T& mu, const T& lambda) {
-		vector<TV> forceBefore = force;
 		for (int p = 0; p < Np; p++) {
 			TSM thisFp = Fp[p];
 			TSM thisP;
 			fixedCorotated(thisFp, mu, lambda, thisP);
 			TSM Vp0PFt = Vp0 * thisP * thisFp.transpose();
-			// std::cout << thisP << std::endl;
 
 			TV X = xp[p];
 			TV X_index_space = X / dx;
@@ -373,14 +398,6 @@ public:
 			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
 			computeWeights1D(w2, dw2, base_node2, X_index_space[1]);
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
-
-			// cout << "w1 = " << endl << w1 << endl;
-			// cout << "w2 = " << endl <<  w2 << endl;
-			// cout << "w3 = " << endl <<  w3 << endl;
-			// cout << "dw1 = " << endl <<  dw1 << endl;
-			// cout << "dw2 = " << endl <<  dw2 << endl;
-			// cout << "dw3 = " << endl <<  dw3 << endl;
-			// cout << "Vp0PFt = " << endl << Vp0PFt << endl;
 
 			if (base_node1 >= res|| base_node2 >= res|| base_node3 >= res || base_node1 < 0 || base_node2 < 0 || base_node3 < 0) {
 				cout << "addElasticity: out of bound base nodes" << endl;
@@ -420,12 +437,7 @@ public:
 							cout << "node_k = " << node_k << endl;
 							std::getchar();
 						}
-						// cout << "foo = " << endl << foo << endl;
-						// cout << "grad_w = " << endl << grad_w << endl;
-						// cout << "Vp0PFt = " << endl << Vp0PFt << endl;
-						// cout << "Vp0 = " << endl << Vp0 << endl;
 						force[idx] += foo;
-
 					}
 				}
 			}
@@ -694,7 +706,7 @@ public:
 			int N_substeps = (int)(((T)1/24)/dt);
 			for (int step = 1; step <= N_substeps; step++) {
 				//for (int step = 1; step <= 5; step++) {
-				// cout << "Step " << step << endl;
+				cout << "Step " << step << endl;
 				advanceOneStep();
 			}
 			mkdir("output/", 0777);
