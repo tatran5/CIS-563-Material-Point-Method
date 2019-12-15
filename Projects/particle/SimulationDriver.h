@@ -373,7 +373,7 @@ public:
 		}
 	}
 
-	void fixedCorotated(TSM& F, const T& mu, const T& lambda, TSM& P) {
+	void fixedCorotated(const TSM& F, const T& mu, const T& lambda, TSM& P) {
 		TSM u, sigma, v;
 		polarSVD(u, sigma, v, F);
 		TSM R = u * v.transpose();
