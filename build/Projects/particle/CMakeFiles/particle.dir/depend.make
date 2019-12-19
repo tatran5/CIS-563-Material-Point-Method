@@ -3,7 +3,12 @@
 
 Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/SimulationDriver.h
 Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/main.cpp
+Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/mesh_query0.1/bounding_box.h
+Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/mesh_query0.1/bounding_box_tree.h
 Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/mesh_query0.1/mesh_query.h
+Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/mesh_query0.1/predicates.h
+Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/mesh_query0.1/util.h
+Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/mesh_query0.1/vec.h
 Projects/particle/CMakeFiles/particle.dir/main.cpp.o: ../Projects/particle/tiny_obj_loader.h
 Projects/particle/CMakeFiles/particle.dir/main.cpp.o: /usr/include/eigen3/Eigen/Cholesky
 Projects/particle/CMakeFiles/particle.dir/main.cpp.o: /usr/include/eigen3/Eigen/Core

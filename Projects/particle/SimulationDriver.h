@@ -9,7 +9,6 @@
 #include <iostream>
 #include <tbb/tbb.h>
 
-using namespace std;
 using namespace tinyobj;
 
 template<class T, int dim>
@@ -37,15 +36,15 @@ public:
 	// Particle parameters
 	T E; //elasticity
 	T nu, mu, lambda, rho, Np, Vp0;
-	vector<TV> xp; // position of particle
-	vector<T> mp; // mass of particle
-	vector<TV> vp; // velocity of particle
-	vector<TSM> Fp;
+	std::vector<TV> xp; // position of particle
+	std::vector<T> mp; // mass of particle
+	std::vector<TV> vp; // velocity of particle
+	std::vector<TSM> Fp;
 
 	// Other
 
 	SimulationDriver() {
-		cout << "SimulationDriver called" << endl;
+		std::cout << "SimulationDriver called" << std::endl;
 
 		// Set values for simulation parameters
 		dt = 1e-3;
@@ -58,7 +57,7 @@ public:
 		maxCorner = 1.f;
 		res = (maxCorner - minCorner) / dx + 1;
 		// Set values for add-on grid parameters
-		NpPerCell1D = 3.f;
+		NpPerCell1D = 2.f;
 		offsetGrid = 8.f;
 		numNode = res * res * res;
 
@@ -68,16 +67,16 @@ public:
 		mu = E / (2 * (1 + nu));
 		lambda = E * nu / ((1 + nu) * (1 - 2 * nu));
 		rho = 1000;
-		sampleParticles();
-		//sampleParticlesInMesh();
+		//sampleParticles();
+		sampleParticlesInMesh();
 		Np = xp.size();
 		Vp0 = dx * dx * dx / NpPerCell1D / NpPerCell1D / NpPerCell1D;
-		mp = vector<T>(Np, Vp0 * rho);
-		vp = vector<TV>(Np, TV::Zero());
-		Fp = vector<TSM>(Np, TSM::Identity());
-		cout << "Np = " << Np <<endl;
-		cout << "res = " << res << endl;
-		cout << "numNode = " << numNode << endl;
+		mp = std::vector<T>(Np, Vp0 * rho);
+		vp = std::vector<TV>(Np, TV::Zero());
+		Fp = std::vector<TSM>(Np, TSM::Identity());
+		std::cout << "Np = " << Np << std::endl;
+		std::cout << "res = " << res << std::endl;
+		std::cout << "numNode = " << numNode << std::endl;
 	}
 
 	void sampleParticles() {
@@ -98,9 +97,6 @@ public:
 								parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D + offsetY;
 								parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D + offsetZ;
 								xp.push_back(parPos);
-								// cout << "p0 " << parPos[0] << endl;
-								// cout << "p1 " << parPos[1] << endl;
-								// cout << "p2 " << parPos[2] << endl;
 							}
 						}
 					}
@@ -110,26 +106,26 @@ public:
 	}
 
 	void sampleParticlesInMesh() {
-		cout << "sampleParticlesInMesh called" << endl;
+		std::cout << "sampleParticlesInMesh called" << std::endl;
 
 		attrib_t attrib;
-		vector<shape_t> shapes = vector<shape_t>();
-		vector<material_t> materials = vector<material_t>();
+		std::vector<shape_t> shapes = std::vector<shape_t>();
+		std::vector<material_t> materials = std::vector<material_t>();
 		std::string warn;
 		std::string err;
-		std::string filenameStr = "../../Obj/wahoo.obj";
+		std::string filenameStr = "../../Obj/GAH.obj";
 		const char* filenameChar = filenameStr.c_str();
 		bool isLoaded = LoadObj(&attrib, &shapes, &materials, &warn, &err, filenameChar, NULL, true, true);
 
 		if (!isLoaded) {
-			cout << "OBJ was not loaded, encountered error: " << err << endl;
+			std::cout << "OBJ was not loaded, encountered error: " << err << std::endl;
 		} else if (shapes.size() > 1) {
-			cout << "MORE THAN ONE MESH DETECTED. WE DO NOT ALLOW AN OBJ TO HAVE MORE THAN ONE MESH" << endl;
+			std::cout << "MORE THAN ONE MESH DETECTED. WE DO NOT ALLOW AN OBJ TO HAVE MORE THAN ONE MESH" << std::endl;
 		} else {
-			cout << "OBJ loaded" << endl;
-			cout << "WARNINGS FROM OBJ LOADER: " << warn << endl;
+			std::cout << "OBJ loaded" << std::endl;
+			std::cout << "WARNINGS FROM OBJ LOADER: " << std::endl << warn << "WARNINGS ENDED"<< std::endl;
 			// vertices are flatten, so indices 0, 1, 2 holds position x, y, z of the first vertex
-			vector<real_t>& vertices = attrib.vertices;
+			std::vector<real_t>& vertices = attrib.vertices;
 
 			// find the smallest and largest point in each direction
 			// so that we can scale this down and put it at position from 0 to 1
@@ -151,6 +147,7 @@ public:
 					if (vertices[v] > largestZ) largestZ = vertices[v];
 				}
 			}
+			std::cout << "Found smallest and largest" << std::endl;
 
 			// move things so that the smallest vertex in all dim is at 1
 			// scale everything down so that it fits from 0 to 1
@@ -162,19 +159,28 @@ public:
 
 			mesh_t mesh = shapes[0].mesh;
 
-			int numVertices = vertices.size();
-			double meshObjectPositions[numVertices];
-			for (int i = 0; i < numVertices; i++) {
-				if (i % 3 == 0) meshObjectPositions[i] = (vertices[i] - smallestX) * scale;
-				else if (i % 3 == 1) meshObjectPositions[i] = (vertices[i] - smallestY) * scale;
-				else meshObjectPositions[i] = (vertices[i] - smallestZ) * scale;
+			int numVertices = vertices.size() / 3;
+			double meshObjectPositions[vertices.size()];
+			for (int i = 0; i < vertices.size(); i++) {
+				// if (i % 3 == 0) meshObjectPositions[i] = (vertices[i] - smallestX) * scale;
+				// else if (i % 3 == 1) meshObjectPositions[i] = (vertices[i] - smallestY) * scale;
+				// else meshObjectPositions[i] = (vertices[i] - smallestZ) * scale;
+				meshObjectPositions[i] = vertices[i];
 			}
+			std::cout << "Moved and scale vertices" << std::endl;
 
-			int numTriangles = mesh.indices.size();
-			int meshObjectTriangles[numTriangles];
-			for (int i = 0; i < numTriangles; i++) meshObjectTriangles[i] = mesh.indices[i].vertex_index;
-			/*
+			int numTriangles = mesh.indices.size() / 3;
+			int meshObjectTriangles[mesh.indices.size()];
+			for (int i = 0; i < mesh.indices.size(); i++) meshObjectTriangles[i] = mesh.indices[i].vertex_index;
+			std::cout << "Indices copied" << std::endl;
+
+			std::cout << "numVertices = " << numVertices << std::endl;
+			std::cout << "meshObjectPositions.size() = " << sizeof(meshObjectPositions) / sizeof(meshObjectPositions[0]) << std::endl;
+			std::cout << "numTriangles = " << numTriangles << std::endl;
+			std::cout << "meshObjectTriangles.size() = " << sizeof(meshObjectTriangles) / sizeof(meshObjectTriangles[0]) << std::endl;
+
 			MeshObject* pMeshObject = construct_mesh_object(numVertices, &meshObjectPositions[0], numTriangles, &meshObjectTriangles[0]);
+			std::cout << "Mesh object created" << std::endl;
 
 			T estDistBwPars1D = dx / NpPerCell1D;
 			for (int cx = offsetGrid; cx < res - 1 - offsetGrid; cx++) {
@@ -193,12 +199,9 @@ public:
 									parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D;// + offsetY;
 									parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D;// + offsetZ;
 
-									double testPoint = [parPos[0], parPos[1], parPos[2]];
-									if (point_inside_mesh(testPoint, pMeshObject)) {
+									double testPoint[3] = {parPos[0], parPos[1], parPos[2]};
+									if (point_inside_mesh(&testPoint[0], pMeshObject)) {
 										xp.push_back(parPos);
-										// cout << "p0 " << parPos[0] << endl;
-										// cout << "p1 " << parPos[1] << endl;
-										// cout << "p2 " << parPos[2] << endl;
 									}
 								}
 							}
@@ -206,7 +209,8 @@ public:
 					}
 				}
 			}
-			*/
+			destroy_mesh_object(pMeshObject);
+			std::cout << "Done sampling mesh" << std::endl;
 		}
 	}
 
@@ -236,7 +240,7 @@ public:
 		return x + y * res + z * res * res;
 	}
 
-	TV computeParticleMomentum(const vector<T> &mp, const vector<TV> &vp) {
+	TV computeParticleMomentum(const std::vector<T> &mp, const std::vector<TV> &vp) {
 		TV result = TV::Zero();
 		for (int p = 0; p < Np; p++) {
 			result += mp[p] * vp[p];
@@ -244,7 +248,7 @@ public:
 		return result;
 	}
 
-	TV computeGridMomentum(const vector<T> &mg, const vector<TV>& vg) {
+	TV computeGridMomentum(const std::vector<T> &mg, const std::vector<TV>& vg) {
 		TV result = TV::Zero();
 		for (int i = 0; i < numNode; i++) {
 			result += mg[i] * vg[i];
@@ -276,11 +280,10 @@ public:
 		dw[2] = zz;
 	}
 
-	void transferP2G(vector<T>& mg, vector<TV>& vg, vector<int>& active_nodes, const vector<TV>& xp, const vector<T>& mp, const vector<TV>& vp) {
+	void transferP2G(std::vector<T>& mg, std::vector<TV>& vg, std::vector<int>& active_nodes, const std::vector<TV>& xp, const std::vector<T>& mp, const std::vector<TV>& vp) {
 		for (int p = 0; p < Np; p++) {
 			TV X = xp[p];
 			TV X_index_space = X / dx;
-			// cout << X_index_space << endl;
 			TV w1, w2, w3, dw1, dw2, dw3;
 			T base_node1, base_node2, base_node3;
 			computeWeights1D(w1, dw1, base_node1, X_index_space[0]);
@@ -288,10 +291,10 @@ public:
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
 
 			if (base_node1 >= res|| base_node2 >= res|| base_node3 >= res || base_node1 < 0 || base_node2 < 0 || base_node3 < 0) {
-				cout << "P2G: out of bound base nodes" << endl;
-				cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << endl;
-				cout << "X_index_space " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2] << endl;
-				cout << "X " << X[0] << " " << X[1] << " " << X[2] << endl;
+				std::cout << "P2G: out of bound base nodes" << std::endl;
+				std::cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << std::endl;
+				std::cout << "X_index_space " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2] << std::endl;
+				std::cout << "X " << X[0] << " " << X[1] << " " << X[2] << std::endl;
 				std::getchar();
 			}
 
@@ -312,11 +315,11 @@ public:
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
 						if (idx >= numNode || idx < 0) {
 							std::cout << numNode << std::endl;
-							cout << "P2G: idx out of bounds!" << endl;
-							cout << "P2G: node_i = " << node_i << endl;
-							cout << "P2G: node_j = " << node_j << endl;
-							cout << "P2G: node_k = " << node_k << endl;
-							cout << idx << endl;
+							std::cout << "P2G: idx out of bounds!" << std::endl;
+							std::cout << "P2G: node_i = " << node_i << std::endl;
+							std::cout << "P2G: node_j = " << node_j << std::endl;
+							std::cout << "P2G: node_k = " << node_k << std::endl;
+							std::cout << idx << std::endl;
 							std::getchar();
 						}
 						mg[idx] += mp[p] * wijk;
@@ -328,7 +331,6 @@ public:
 					}
 				}
 			}
-			// cout << "sum_wijk = " << sum_wijk << endl;
 		}
 
 		for (int i = 0; i < numNode; i++) {
@@ -341,11 +343,7 @@ public:
 		}
 	}
 
-	void addGravity(vector<TV>& force, const vector<T>& mg, const vector<int>& active_nodes, const TV& gravity) {
-		// tbb::parallel_for(0, (int)active_nodes.size(), [&](int i){
-		// 	int idx = active_nodes[i];
-		// 	force[idx] += mg[idx] * gravity;
-		// });
+	void addGravity(std::vector<TV>& force, const std::vector<T>& mg, const std::vector<int>& active_nodes, const TV& gravity) {
 		for (int i = 0; i < active_nodes.size(); i++) {
 			int idx = active_nodes[i];
 			force[idx] += mg[idx] * gravity;
@@ -382,7 +380,7 @@ public:
 		P = T(2) * mu * (F - R) + lambda * (J - 1) * A;
 	}
 
-	void addElasticity( vector<TV>& force, const vector<TV>& xp, const vector<TSM>& Fp, const T& Vp0, const T& mu, const T& lambda) {
+	void addElasticity( std::vector<TV>& force, const std::vector<TV>& xp, const std::vector<TSM>& Fp, const T& Vp0, const T& mu, const T& lambda) {
 		for (int p = 0; p < Np; p++) {
 			TSM thisFp = Fp[p];
 			TSM thisP;
@@ -400,9 +398,9 @@ public:
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
 
 			if (base_node1 >= res|| base_node2 >= res|| base_node3 >= res || base_node1 < 0 || base_node2 < 0 || base_node3 < 0) {
-				cout << "addElasticity: out of bound base nodes" << endl;
-				cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << endl;
-				cout << "X_index_space: " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2];
+				std::cout << "addElasticity: out of bound base nodes" << std::endl;
+				std::cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << std::endl;
+				std::cout << "X_index_space: " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2] << std::endl;
 				std::getchar();
 			}
 
@@ -431,10 +429,10 @@ public:
 
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
 						if (idx >= numNode || idx < 0) {
-							cout << "addElasticity: idx out of bound!" << endl;
-							cout << "node_i = " << node_i << endl;
-							cout << "node_j = " << node_j << endl;
-							cout << "node_k = " << node_k << endl;
+							std::cout << "addElasticity: idx out of bound!" << std::endl;
+							std::cout << "node_i = " << node_i << std::endl;
+							std::cout << "node_j = " << node_j << std::endl;
+							std::cout << "node_k = " << node_k << std::endl;
 							std::getchar();
 						}
 						force[idx] += foo;
@@ -444,14 +442,14 @@ public:
 		}
 	}
 
-	void updateGridVelocity(const vector<T>& mg, const vector<TV>& vgn, const vector<TV>& force, const vector<int>& active_nodes, const T& dt, vector<TV>& vg) {
+	void updateGridVelocity(const std::vector<T>& mg, const std::vector<TV>& vgn, const std::vector<TV>& force, const std::vector<int>& active_nodes, const T& dt, std::vector<TV>& vg) {
 		for (int i = 0; i < active_nodes.size(); i++) {
 			int idx = active_nodes[i];
 			vg[idx] = vgn[idx] + dt * force[idx] / mg[idx];
 		}
 	}
 
-	void setBoundaryVelocities(int thickness, vector<TV>& vg) {
+	void setBoundaryVelocities(int thickness, std::vector<TV>& vg) {
 		// x direction
 		for (int i = 0; i < thickness; i ++) {
 			for (int j = 0; j < res; j++) {
@@ -504,7 +502,7 @@ public:
 		}
 	}
 
-	void transferG2P(const T& dt, const vector<TV>& vgn, const vector<TV>& vg, const T& flip, vector<TV>& xp, vector<TV>& vp) {
+	void transferG2P(const T& dt, const std::vector<TV>& vgn, const std::vector<TV>& vg, const T& flip, std::vector<TV>& xp, std::vector<TV>& vp) {
 		for (int p = 0; p < Np; p++) {
 			TV X = xp[p];
 			TV X_index_space = X / dx;
@@ -516,9 +514,9 @@ public:
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
 
 			if (base_node1 >= res|| base_node2 >= res|| base_node3 >= res || base_node1 < 0 || base_node2 < 0 || base_node3 < 0) {
-				cout << "G2P: out of bound base nodes" << endl;
-				cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << endl;
-				cout << "X_index_space: " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2];
+				std::cout << "G2P: out of bound base nodes" << std::endl;
+				std::cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << std::endl;
+				std::cout << "X_index_space: " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2] << std::endl;
 				std::getchar();
 			}
 
@@ -541,10 +539,10 @@ public:
 
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
 						if (idx >= numNode || idx < 0) {
-							cout << "G2P: idx out of bound!" << endl;
-							cout << "node_i = " << node_i << endl;
-							cout << "node_j = " << node_j << endl;
-							cout << "node_k = " << node_k << endl;
+							std::cout << "G2P: idx out of bound!" << std::endl;
+							std::cout << "node_i = " << node_i << std::endl;
+							std::cout << "node_j = " << node_j << std::endl;
+							std::cout << "node_k = " << node_k << std::endl;
 							std::getchar();
 						}
 						vpic += wijk * vg[idx];
@@ -553,13 +551,12 @@ public:
 					}
 				}
 			}
-			// cout << "sum_wijk = " << sum_wijk << endl;
 			vp[p] = (1 - flip) * vpic + flip * vflip;
 			xp[p] += dt * vpic;
 		}
 	}
 
-	void evolveF(const T& dt, const vector<TV>& vg, const vector<TV>& xp, vector<TSM>& Fp) {
+	void evolveF(const T& dt, const std::vector<TV>& vg, const std::vector<TV>& xp, std::vector<TSM>& Fp) {
 		for (int p = 0; p < Np; p++) {
 			TSM thisFp = Fp[p];
 
@@ -574,9 +571,9 @@ public:
 			computeWeights1D(w3, dw3, base_node3, X_index_space[2]);
 
 			if (base_node1 >= res|| base_node2 >= res|| base_node3 >= res || base_node1 < 0 || base_node2 < 0 || base_node3 < 0) {
-				cout << "evolvF: out of bound base nodes" << endl;
-				cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << endl;
-				cout << "X_index_space: " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2];
+				std::cout << "evolvF: out of bound base nodes" << std::endl;
+				std::cout << "base_node1 " << base_node1 << "; base_node2: " << base_node2 << "; base_node3: " << base_node3 << std::endl;
+				std::cout << "X_index_space: " << X_index_space[0] << " " << X_index_space[1] << " " << X_index_space[2];
 				std::getchar();
 			}
 
@@ -605,10 +602,10 @@ public:
 						TV grad_w = TV(dwijkdxi, dwijkdxj, dwijkdxk);
 						int idx = gridSpace2Idx(node_i, node_j, node_k);
 						if (idx >= numNode || idx < 0) {
-							cout << "evolveF: idx out of bound!" << endl;
-							cout << "node_i = " << node_i << endl;
-							cout << "node_j = " << node_j << endl;
-							cout << "node_k = " << node_k << endl;
+							std::cout << "evolveF: idx out of bound!" << std::endl;
+							std::cout << "node_i = " << node_i << std::endl;
+							std::cout << "node_j = " << node_j << std::endl;
+							std::cout << "node_k = " << node_k << std::endl;
 							std::getchar();
 						}
 						TV vijk = vg[idx];
@@ -629,54 +626,36 @@ public:
 
 	void advanceOneStep() {
 		// Init zero grid data
-		vector<T> mg = vector<T>(numNode, 0); // grid mass
-		vector<TV> vgn = vector<TV>(numNode, TV::Zero()); // grid new velocity
-		vector<TV> vg = vector<TV>(numNode, TV::Zero()); // grid old velocity
-		vector<TV> force = vector<TV>(numNode, TV::Zero());
-		vector<int> active_nodes;
+		std::vector<T> mg = std::vector<T>(numNode, 0); // grid mass
+		std::vector<TV> vgn = std::vector<TV>(numNode, TV::Zero()); // grid new velocity
+		std::vector<TV> vg = std::vector<TV>(numNode, TV::Zero()); // grid old velocity
+		std::vector<TV> force = std::vector<TV>(numNode, TV::Zero());
+		std::vector<int> active_nodes;
 
 		// P2G
 		//TV Lp = computeParticleMomentum(mp, vp);
 		transferP2G(mg, vgn, active_nodes, xp, mp, vp);
-		//cout << "P2G" << endl;
-		//TV Lg = computeGridMomentum(mg, vgn);
-		// cout << "P2G: Lp = " << endl << Lp << endl;
-		// cout << "P2G: Lg = " << endl << Lg << endl;
-		// TV max_vgn = *std::max_element(vgn.begin(), vgn.end(),
-		// [] (TV a, TV b) {
-		// 	return a.norm() < b.norm();});
-		// 	std::cout << max_vgn.norm() << std::endl;
+
 		// Compute force
 		addGravity(force, mg, active_nodes, gravity);
-		//cout << "addGravity" << endl;
 		addElasticity(force, xp, Fp, Vp0, mu, lambda);
-		// cout << "addElasticity" << endl;
+
 		// Update velocity
 		updateGridVelocity(mg, vgn, force, active_nodes, dt, vg);
 
-		// std::getchar();
-		//cout << "updateGridVelocity" << endl;
 		// Boundary conditions
 		setBoundaryVelocities(5, vg);
-		// TV max_vn = *std::max_element(vg.begin(), vg.end(),
-		//         [] (TV a, TV b) {
-		//         return a.norm() < b.norm();});
-		// std::cout << "max_vn" <<  max_vn.norm() << std::endl;
-		//cout << "setBoundaryVelocities" << endl;
+
 		// G2P
 		// Lg = computeGridMomentum(mg, vg);
 		evolveF(dt, vg, xp, Fp);
-		// cout << "evolveF" << endl;
 		transferG2P(dt, vgn, vg, 0.95, xp, vp);
-		//cout << "G2P" << endl;
 		// Lp = computeParticleMomentum(mp, vp);
-		// cout << "G2P: Lp = " << endl << Lp << endl;
-		// cout << "G2P: Lg = " << endl << Lg << endl;
 	}
 
-	void dumpPoly(string filename)
+	void dumpPoly(std::string filename)
 	{
-		ofstream fs;
+		std::ofstream fs;
 		fs.open(filename);
 		fs << "POINTS\n";
 		int count = 0;
@@ -684,7 +663,7 @@ public:
 			fs << ++count << ":";
 			for (int i = 0; i < dim; i++){
 				if (parPos(i) != parPos(i))
-				cout << "GETTING NAN FOR PARTICLE POSITION" << endl;
+				std::cout << "GETTING NAN FOR PARTICLE POSITION" << std::endl;
 				fs << " " << parPos(i);
 			}
 			if (dim == 2)
@@ -701,18 +680,18 @@ public:
 	{
 		for(int frame=1; frame<max_frame; frame++) {
 			//for(int frame=1; frame<5; frame++) {
-			cout << "Frame " << frame << endl;
+			std::cout << "Frame " << frame << std::endl;
 
 			int N_substeps = (int)(((T)1/24)/dt);
 			for (int step = 1; step <= N_substeps; step++) {
 				//for (int step = 1; step <= 5; step++) {
-				cout << "Step " << step << endl;
+				std::cout << "Step " << step << std::endl;
 				advanceOneStep();
 			}
 			mkdir("output/", 0777);
-			string filename = "output/" + to_string(frame) + ".poly";
+			std::string filename = "output/" + std::to_string(frame) + ".poly";
 			dumpPoly(filename);
-			cout << endl;
+			std::cout << std::endl;
 		}
 	}
 };
