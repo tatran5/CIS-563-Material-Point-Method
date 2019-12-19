@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2
+CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build
+CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build
 
 # Include any dependencies generated for this target.
 include tetgen/CMakeFiles/tetgen.dir/depend.make
@@ -59,16 +59,16 @@ include tetgen/CMakeFiles/tetgen.dir/flags.make
 
 tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o: tetgen/CMakeFiles/tetgen.dir/flags.make
 tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o: ../Deps/libigl/external/tetgen/tetgen.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tetgen.dir/tetgen.cxx.o -c /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o"
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tetgen.dir/tetgen.cxx.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx
 
 tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tetgen.dir/tetgen.cxx.i"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx > CMakeFiles/tetgen.dir/tetgen.cxx.i
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx > CMakeFiles/tetgen.dir/tetgen.cxx.i
 
 tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tetgen.dir/tetgen.cxx.s"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx -o CMakeFiles/tetgen.dir/tetgen.cxx.s
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/tetgen.cxx -o CMakeFiles/tetgen.dir/tetgen.cxx.s
 
 tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o.requires:
 
@@ -83,16 +83,16 @@ tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o.provides.build: tetgen/CMakeFiles/tetg
 
 tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o: tetgen/CMakeFiles/tetgen.dir/flags.make
 tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o: ../Deps/libigl/external/tetgen/predicates.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tetgen.dir/predicates.cxx.o -c /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o"
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tetgen.dir/predicates.cxx.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx
 
 tetgen/CMakeFiles/tetgen.dir/predicates.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tetgen.dir/predicates.cxx.i"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx > CMakeFiles/tetgen.dir/predicates.cxx.i
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx > CMakeFiles/tetgen.dir/predicates.cxx.i
 
 tetgen/CMakeFiles/tetgen.dir/predicates.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tetgen.dir/predicates.cxx.s"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx -o CMakeFiles/tetgen.dir/predicates.cxx.s
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen/predicates.cxx -o CMakeFiles/tetgen.dir/predicates.cxx.s
 
 tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o.requires:
 
@@ -117,9 +117,9 @@ tetgen/libtetgen.a: tetgen/CMakeFiles/tetgen.dir/tetgen.cxx.o
 tetgen/libtetgen.a: tetgen/CMakeFiles/tetgen.dir/predicates.cxx.o
 tetgen/libtetgen.a: tetgen/CMakeFiles/tetgen.dir/build.make
 tetgen/libtetgen.a: tetgen/CMakeFiles/tetgen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtetgen.a"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && $(CMAKE_COMMAND) -P CMakeFiles/tetgen.dir/cmake_clean_target.cmake
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tetgen.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libtetgen.a"
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && $(CMAKE_COMMAND) -P CMakeFiles/tetgen.dir/cmake_clean_target.cmake
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tetgen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tetgen/CMakeFiles/tetgen.dir/build: tetgen/libtetgen.a
@@ -132,10 +132,10 @@ tetgen/CMakeFiles/tetgen.dir/requires: tetgen/CMakeFiles/tetgen.dir/predicates.c
 .PHONY : tetgen/CMakeFiles/tetgen.dir/requires
 
 tetgen/CMakeFiles/tetgen.dir/clean:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen && $(CMAKE_COMMAND) -P CMakeFiles/tetgen.dir/cmake_clean.cmake
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen && $(CMAKE_COMMAND) -P CMakeFiles/tetgen.dir/cmake_clean.cmake
 .PHONY : tetgen/CMakeFiles/tetgen.dir/clean
 
 tetgen/CMakeFiles/tetgen.dir/depend:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/tetgen/CMakeFiles/tetgen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/tetgen/CMakeFiles/tetgen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tetgen/CMakeFiles/tetgen.dir/depend
 

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2
+CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build
+CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/SuiteSparse.dir
@@ -66,14 +66,14 @@ CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/bu
 CMakeFiles/SuiteSparse.dir/all:
 	$(MAKE) -f CMakeFiles/SuiteSparse.dir/build.make CMakeFiles/SuiteSparse.dir/depend
 	$(MAKE) -f CMakeFiles/SuiteSparse.dir/build.make CMakeFiles/SuiteSparse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num= "Built target SuiteSparse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num= "Built target SuiteSparse"
 .PHONY : CMakeFiles/SuiteSparse.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SuiteSparse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SuiteSparse.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : CMakeFiles/SuiteSparse.dir/rule
 
 # Convenience name for target.
@@ -124,7 +124,7 @@ clean: CMakeFiles/SuiteSparse.dir/clean
 ../Deps/osqp/build/CMakeFiles/osqp.dir/all: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/all
 	$(MAKE) -f ../Deps/osqp/build/CMakeFiles/osqp.dir/build.make ../Deps/osqp/build/CMakeFiles/osqp.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/CMakeFiles/osqp.dir/build.make ../Deps/osqp/build/CMakeFiles/osqp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target osqp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53 "Built target osqp"
 .PHONY : ../Deps/osqp/build/CMakeFiles/osqp.dir/all
 
 # Include target in all.
@@ -134,9 +134,9 @@ all: ../Deps/osqp/build/CMakeFiles/osqp.dir/all
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/CMakeFiles/osqp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/CMakeFiles/osqp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/CMakeFiles/osqp.dir/rule
 
 # Convenience name for target.
@@ -163,7 +163,7 @@ clean: ../Deps/osqp/build/CMakeFiles/osqp.dir/clean
 ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/all: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/all
 	$(MAKE) -f ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/build.make ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/build.make ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=56,57,58,59,60,61,62,63,64,65,66,67,68 "Built target osqpstatic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=56,57,58,59,60,61,62,63,64,65,66,67,68 "Built target osqpstatic"
 .PHONY : ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/all
 
 # Include target in all.
@@ -173,9 +173,9 @@ all: ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/all
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 29
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/rule
 
 # Convenience name for target.
@@ -200,7 +200,7 @@ clean: ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/clean
 ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/all: ../Deps/osqp/build/CMakeFiles/osqpstatic.dir/all
 	$(MAKE) -f ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/build.make ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/build.make ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=54,55 "Built target osqp_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=54,55 "Built target osqp_demo"
 .PHONY : ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/all
 
 # Include target in all.
@@ -210,9 +210,9 @@ all: ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/all
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 31
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/rule
 
 # Convenience name for target.
@@ -278,7 +278,7 @@ clean: ../Deps/osqp/build/CMakeFiles/osqp_demo.dir/clean
 ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/all:
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/build.make ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/build.make ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=26,27 "Built target linsys_pardiso"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=26,27 "Built target linsys_pardiso"
 .PHONY : ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/all
 
 # Include target in all.
@@ -288,9 +288,9 @@ all: ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/all
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/rule
 
 # Convenience name for target.
@@ -335,7 +335,7 @@ clean: ../Deps/osqp/build/lin_sys/direct/CMakeFiles/linsys_pardiso.dir/clean
 ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/all:
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target linsys_qdldl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target linsys_qdldl"
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/all
 
 # Include target in all.
@@ -345,9 +345,9 @@ all: ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/all
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/rule
 
 # Convenience name for target.
@@ -397,7 +397,7 @@ clean: ../Deps/osqp/build/lin_sys/direct/qdldl/CMakeFiles/linsys_qdldl.dir/clean
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/all:
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=89,90 "Built target qdldl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=89,90 "Built target qdldl"
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/all
 
 # Include target in all.
@@ -407,9 +407,9 @@ all: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.dir/rule
 
 # Convenience name for target.
@@ -434,7 +434,7 @@ clean: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl.di
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/all: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/all
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=91,92 "Built target qdldl_example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=91,92 "Built target qdldl_example"
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/all
 
 # Include target in all.
@@ -444,9 +444,9 @@ all: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_exam
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_example.dir/rule
 
 # Convenience name for target.
@@ -471,7 +471,7 @@ clean: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldl_ex
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/all:
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=93 "Built target qdldlobject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=93 "Built target qdldlobject"
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/all
 
 # Include target in all.
@@ -481,9 +481,9 @@ all: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobjec
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobject.dir/rule
 
 # Convenience name for target.
@@ -508,7 +508,7 @@ clean: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlobj
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/all:
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=94,95 "Built target qdldlstatic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=94,95 "Built target qdldlstatic"
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/all
 
 # Include target in all.
@@ -518,9 +518,9 @@ all: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstati
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlstatic.dir/rule
 
 # Convenience name for target.
@@ -545,14 +545,14 @@ clean: ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/qdldlsta
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/all:
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/depend
 	$(MAKE) -f ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/build.make ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : ../Deps/osqp/build/lin_sys/direct/qdldl/qdldl_sources/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -613,7 +613,7 @@ glad/preinstall:
 glad/CMakeFiles/glad.dir/all:
 	$(MAKE) -f glad/CMakeFiles/glad.dir/build.make glad/CMakeFiles/glad.dir/depend
 	$(MAKE) -f glad/CMakeFiles/glad.dir/build.make glad/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=1 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=1 "Built target glad"
 .PHONY : glad/CMakeFiles/glad.dir/all
 
 # Include target in all.
@@ -623,9 +623,9 @@ all: glad/CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
 glad/CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 glad/CMakeFiles/glad.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : glad/CMakeFiles/glad.dir/rule
 
 # Convenience name for target.
@@ -686,7 +686,7 @@ glfw/src/preinstall:
 glfw/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target glfw"
 .PHONY : glfw/src/CMakeFiles/glfw.dir/all
 
 # Include target in all.
@@ -696,9 +696,9 @@ all: glfw/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 glfw/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 glfw/src/CMakeFiles/glfw.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : glfw/src/CMakeFiles/glfw.dir/rule
 
 # Convenience name for target.
@@ -742,7 +742,7 @@ imgui/CMakeFiles/imgui.dir/all: glad/CMakeFiles/glad.dir/all
 imgui/CMakeFiles/imgui.dir/all: glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f imgui/CMakeFiles/imgui.dir/build.make imgui/CMakeFiles/imgui.dir/depend
 	$(MAKE) -f imgui/CMakeFiles/imgui.dir/build.make imgui/CMakeFiles/imgui.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=21,22,23,24,25 "Built target imgui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=21,22,23,24,25 "Built target imgui"
 .PHONY : imgui/CMakeFiles/imgui.dir/all
 
 # Include target in all.
@@ -752,9 +752,9 @@ all: imgui/CMakeFiles/imgui.dir/all
 
 # Build rule for subdir invocation for target.
 imgui/CMakeFiles/imgui.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 imgui/CMakeFiles/imgui.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : imgui/CMakeFiles/imgui.dir/rule
 
 # Convenience name for target.
@@ -797,7 +797,7 @@ stb_image/preinstall:
 stb_image/CMakeFiles/igl_stb_image.dir/all:
 	$(MAKE) -f stb_image/CMakeFiles/igl_stb_image.dir/build.make stb_image/CMakeFiles/igl_stb_image.dir/depend
 	$(MAKE) -f stb_image/CMakeFiles/igl_stb_image.dir/build.make stb_image/CMakeFiles/igl_stb_image.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=19,20 "Built target igl_stb_image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=19,20 "Built target igl_stb_image"
 .PHONY : stb_image/CMakeFiles/igl_stb_image.dir/all
 
 # Include target in all.
@@ -807,9 +807,9 @@ all: stb_image/CMakeFiles/igl_stb_image.dir/all
 
 # Build rule for subdir invocation for target.
 stb_image/CMakeFiles/igl_stb_image.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 stb_image/CMakeFiles/igl_stb_image.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : stb_image/CMakeFiles/igl_stb_image.dir/rule
 
 # Convenience name for target.
@@ -852,7 +852,7 @@ tetgen/preinstall:
 tetgen/CMakeFiles/tetgen.dir/all:
 	$(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/depend
 	$(MAKE) -f tetgen/CMakeFiles/tetgen.dir/build.make tetgen/CMakeFiles/tetgen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=96,97,98 "Built target tetgen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=96,97,98 "Built target tetgen"
 .PHONY : tetgen/CMakeFiles/tetgen.dir/all
 
 # Include target in all.
@@ -862,9 +862,9 @@ all: tetgen/CMakeFiles/tetgen.dir/all
 
 # Build rule for subdir invocation for target.
 tetgen/CMakeFiles/tetgen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 tetgen/CMakeFiles/tetgen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : tetgen/CMakeFiles/tetgen.dir/rule
 
 # Convenience name for target.
@@ -907,7 +907,7 @@ triangle/preinstall:
 triangle/CMakeFiles/triangle.dir/all:
 	$(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/depend
 	$(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=99,100 "Built target triangle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=99,100 "Built target triangle"
 .PHONY : triangle/CMakeFiles/triangle.dir/all
 
 # Include target in all.
@@ -917,9 +917,9 @@ all: triangle/CMakeFiles/triangle.dir/all
 
 # Build rule for subdir invocation for target.
 triangle/CMakeFiles/triangle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 triangle/CMakeFiles/triangle.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : triangle/CMakeFiles/triangle.dir/rule
 
 # Convenience name for target.
@@ -998,7 +998,7 @@ partio-build/src/lib/preinstall:
 partio-build/src/lib/CMakeFiles/partio.dir/all:
 	$(MAKE) -f partio-build/src/lib/CMakeFiles/partio.dir/build.make partio-build/src/lib/CMakeFiles/partio.dir/depend
 	$(MAKE) -f partio-build/src/lib/CMakeFiles/partio.dir/build.make partio-build/src/lib/CMakeFiles/partio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Built target partio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Built target partio"
 .PHONY : partio-build/src/lib/CMakeFiles/partio.dir/all
 
 # Include target in all.
@@ -1008,9 +1008,9 @@ all: partio-build/src/lib/CMakeFiles/partio.dir/all
 
 # Build rule for subdir invocation for target.
 partio-build/src/lib/CMakeFiles/partio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 partio-build/src/lib/CMakeFiles/partio.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : partio-build/src/lib/CMakeFiles/partio.dir/rule
 
 # Convenience name for target.
@@ -1071,7 +1071,7 @@ Projects/particle/preinstall:
 Projects/particle/CMakeFiles/particle.dir/all:
 	$(MAKE) -f Projects/particle/CMakeFiles/particle.dir/build.make Projects/particle/CMakeFiles/particle.dir/depend
 	$(MAKE) -f Projects/particle/CMakeFiles/particle.dir/build.make Projects/particle/CMakeFiles/particle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=69,70 "Built target particle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=69,70 "Built target particle"
 .PHONY : Projects/particle/CMakeFiles/particle.dir/all
 
 # Include target in all.
@@ -1081,9 +1081,9 @@ all: Projects/particle/CMakeFiles/particle.dir/all
 
 # Build rule for subdir invocation for target.
 Projects/particle/CMakeFiles/particle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Projects/particle/CMakeFiles/particle.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : Projects/particle/CMakeFiles/particle.dir/rule
 
 # Convenience name for target.

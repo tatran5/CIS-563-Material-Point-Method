@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2
+CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build
+CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build
 
 # Include any dependencies generated for this target.
 include stb_image/CMakeFiles/igl_stb_image.dir/depend.make
@@ -59,16 +59,16 @@ include stb_image/CMakeFiles/igl_stb_image.dir/flags.make
 
 stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o: stb_image/CMakeFiles/igl_stb_image.dir/flags.make
 stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o: ../Deps/libigl/external/stb_image/igl_stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o -c /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o"
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o -c /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp
 
 stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.i"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp > CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.i
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp > CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.i
 
 stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.s"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp -o CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.s
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp -o CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.s
 
 stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o.requires:
 
@@ -91,9 +91,9 @@ igl_stb_image_EXTERNAL_OBJECTS =
 stb_image/libigl_stb_image.a: stb_image/CMakeFiles/igl_stb_image.dir/igl_stb_image.cpp.o
 stb_image/libigl_stb_image.a: stb_image/CMakeFiles/igl_stb_image.dir/build.make
 stb_image/libigl_stb_image.a: stb_image/CMakeFiles/igl_stb_image.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libigl_stb_image.a"
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image && $(CMAKE_COMMAND) -P CMakeFiles/igl_stb_image.dir/cmake_clean_target.cmake
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/igl_stb_image.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libigl_stb_image.a"
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image && $(CMAKE_COMMAND) -P CMakeFiles/igl_stb_image.dir/cmake_clean_target.cmake
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/igl_stb_image.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 stb_image/CMakeFiles/igl_stb_image.dir/build: stb_image/libigl_stb_image.a
@@ -105,10 +105,10 @@ stb_image/CMakeFiles/igl_stb_image.dir/requires: stb_image/CMakeFiles/igl_stb_im
 .PHONY : stb_image/CMakeFiles/igl_stb_image.dir/requires
 
 stb_image/CMakeFiles/igl_stb_image.dir/clean:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image && $(CMAKE_COMMAND) -P CMakeFiles/igl_stb_image.dir/cmake_clean.cmake
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image && $(CMAKE_COMMAND) -P CMakeFiles/igl_stb_image.dir/cmake_clean.cmake
 .PHONY : stb_image/CMakeFiles/igl_stb_image.dir/clean
 
 stb_image/CMakeFiles/igl_stb_image.dir/depend:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/stb_image/CMakeFiles/igl_stb_image.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2 /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/stb_image/CMakeFiles/igl_stb_image.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : stb_image/CMakeFiles/igl_stb_image.dir/depend
 

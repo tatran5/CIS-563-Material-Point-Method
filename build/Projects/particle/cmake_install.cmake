@@ -1,4 +1,4 @@
-# Install script for directory: /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle
+# Install script for directory: /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/particle"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/particle")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/particle")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/particle" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/particle")
     if(CMAKE_INSTALL_DO_STRIP)

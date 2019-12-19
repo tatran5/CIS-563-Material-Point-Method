@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2
+CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build
+CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/triangle/CMakeFiles/progress.marks
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/triangle/CMakeFiles/progress.marks
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/clean
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/preinstall
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/preinstall
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 triangle/CMakeFiles/triangle.dir/rule:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/CMakeFiles/triangle.dir/rule
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f CMakeFiles/Makefile2 triangle/CMakeFiles/triangle.dir/rule
 .PHONY : triangle/CMakeFiles/triangle.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ triangle: triangle/CMakeFiles/triangle.dir/rule
 
 # fast build rule for target.
 triangle/fast:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/build
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/build
 .PHONY : triangle/fast
 
 triangle.o: triangle.c.o
@@ -188,7 +188,7 @@ triangle.o: triangle.c.o
 
 # target to build an object file
 triangle.c.o:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/triangle.c.o
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/triangle.c.o
 .PHONY : triangle.c.o
 
 triangle.i: triangle.c.i
@@ -197,7 +197,7 @@ triangle.i: triangle.c.i
 
 # target to preprocess a source file
 triangle.c.i:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/triangle.c.i
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/triangle.c.i
 .PHONY : triangle.c.i
 
 triangle.s: triangle.c.s
@@ -206,7 +206,7 @@ triangle.s: triangle.c.s
 
 # target to generate assembly for a file
 triangle.c.s:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/triangle.c.s
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(MAKE) -f triangle/CMakeFiles/triangle.dir/build.make triangle/CMakeFiles/triangle.dir/triangle.c.s
 .PHONY : triangle.c.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

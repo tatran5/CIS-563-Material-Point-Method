@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_FLAGS = -O3 -DNDEBUG  
 
-C_DEFINES = -DANSI_DECLARATORS -DCISPBA_PLUGIN_DIR=\"/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/Plugins\" -DTRILIBRARY
+C_DEFINES = -DANSI_DECLARATORS -DCISPBA_PLUGIN_DIR=\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/Plugins\" -DTRILIBRARY
 
 C_INCLUDES = 
 

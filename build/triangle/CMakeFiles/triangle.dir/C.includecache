@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.c
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.c
 stdio.h
 -
 stdlib.h
@@ -22,7 +22,7 @@ float.h
 fpu_control.h
 -
 triangle.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.h
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/triangle/triangle.h
 

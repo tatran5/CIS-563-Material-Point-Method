@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-download
+CMAKE_SOURCE_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-download
+CMAKE_BINARY_DIR = /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/partio-download/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

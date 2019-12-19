@@ -9,6 +9,7 @@
 #include <iostream>
 #include <tbb/tbb.h>
 
+
 using namespace tinyobj;
 
 template<class T, int dim>
@@ -57,8 +58,8 @@ public:
 		maxCorner = 1.f;
 		res = (maxCorner - minCorner) / dx + 1;
 		// Set values for add-on grid parameters
-		NpPerCell1D = 2.f;
-		offsetGrid = 8.f;
+		NpPerCell1D = 12.f;
+		offsetGrid = 6.f;
 		numNode = res * res * res;
 
 		// Set values for particles
@@ -75,8 +76,8 @@ public:
 		vp = std::vector<TV>(Np, TV::Zero());
 		Fp = std::vector<TSM>(Np, TSM::Identity());
 		std::cout << "Np = " << Np << std::endl;
-		std::cout << "res = " << res << std::endl;
-		std::cout << "numNode = " << numNode << std::endl;
+		// std::cout << "res = " << res << std::endl;
+		// std::cout << "numNode = " << numNode << std::endl;
 	}
 
 	void sampleParticles() {
@@ -113,7 +114,7 @@ public:
 		std::vector<material_t> materials = std::vector<material_t>();
 		std::string warn;
 		std::string err;
-		std::string filenameStr = "../../Obj/GAH.obj";
+		std::string filenameStr = "../../Obj/TheFUCK.obj";
 		const char* filenameChar = filenameStr.c_str();
 		bool isLoaded = LoadObj(&attrib, &shapes, &materials, &warn, &err, filenameChar, NULL, true, true);
 
@@ -147,7 +148,7 @@ public:
 					if (vertices[v] > largestZ) largestZ = vertices[v];
 				}
 			}
-			std::cout << "Found smallest and largest" << std::endl;
+//			std::cout << "Found smallest and largest" << std::endl;
 
 			// move things so that the smallest vertex in all dim is at 1
 			// scale everything down so that it fits from 0 to 1
@@ -167,17 +168,17 @@ public:
 				// else meshObjectPositions[i] = (vertices[i] - smallestZ) * scale;
 				meshObjectPositions[i] = vertices[i];
 			}
-			std::cout << "Moved and scale vertices" << std::endl;
+//			std::cout << "Moved and scale vertices" << std::endl;
 
 			int numTriangles = mesh.indices.size() / 3;
 			int meshObjectTriangles[mesh.indices.size()];
 			for (int i = 0; i < mesh.indices.size(); i++) meshObjectTriangles[i] = mesh.indices[i].vertex_index;
-			std::cout << "Indices copied" << std::endl;
+//			std::cout << "Indices copied" << std::endl;
 
-			std::cout << "numVertices = " << numVertices << std::endl;
-			std::cout << "meshObjectPositions.size() = " << sizeof(meshObjectPositions) / sizeof(meshObjectPositions[0]) << std::endl;
-			std::cout << "numTriangles = " << numTriangles << std::endl;
-			std::cout << "meshObjectTriangles.size() = " << sizeof(meshObjectTriangles) / sizeof(meshObjectTriangles[0]) << std::endl;
+			// std::cout << "numVertices = " << numVertices << std::endl;
+			// std::cout << "meshObjectPositions.size() = " << sizeof(meshObjectPositions) / sizeof(meshObjectPositions[0]) << std::endl;
+			// std::cout << "numTriangles = " << numTriangles << std::endl;
+			// std::cout << "meshObjectTriangles.size() = " << sizeof(meshObjectTriangles) / sizeof(meshObjectTriangles[0]) << std::endl;
 
 			MeshObject* pMeshObject = construct_mesh_object(numVertices, &meshObjectPositions[0], numTriangles, &meshObjectTriangles[0]);
 			std::cout << "Mesh object created" << std::endl;
@@ -210,7 +211,7 @@ public:
 				}
 			}
 			destroy_mesh_object(pMeshObject);
-			std::cout << "Done sampling mesh" << std::endl;
+//			std::cout << "Done sampling mesh" << std::endl;
 		}
 	}
 

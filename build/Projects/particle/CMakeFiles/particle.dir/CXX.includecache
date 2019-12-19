@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
 tiny_obj_loader.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/tiny_obj_loader.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/tiny_obj_loader.h
 mesh_query0.1/mesh_query.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
 Eigen/Sparse
 -
 unsupported/Eigen/IterativeSolvers
@@ -22,7 +22,7 @@ iostream
 tbb/tbb.h
 -
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp
 Eigen/Core
 -
 Eigen/Dense
@@ -42,27 +42,27 @@ random
 chrono
 -
 SimulationDriver.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/SimulationDriver.h
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box.h
 vec.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/vec.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/vec.h
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box_tree.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box_tree.h
 vector
 -
 bounding_box.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box.h
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/mesh_query.h
 cfloat
 -
 bounding_box_tree.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box_tree.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/bounding_box_tree.h
 predicates.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/predicates.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/predicates.h
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/predicates.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/predicates.h
 stdio.h
 -
 stdlib.h
@@ -74,7 +74,7 @@ float.h
 fpu_control.h
 -
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/util.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/util.h
 algorithm
 -
 vector
@@ -83,10 +83,8 @@ cmath
 -
 iostream
 -
-climits
--
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/vec.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/vec.h
 cassert
 -
 cmath
@@ -94,9 +92,9 @@ cmath
 iostream
 -
 util.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/util.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/mesh_query0.1/util.h
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/tiny_obj_loader.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/tiny_obj_loader.h
 map
 -
 string

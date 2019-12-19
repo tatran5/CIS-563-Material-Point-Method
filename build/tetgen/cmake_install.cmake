@@ -1,4 +1,4 @@
-# Install script for directory: /home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen
+# Install script for directory: /home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/tetgen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

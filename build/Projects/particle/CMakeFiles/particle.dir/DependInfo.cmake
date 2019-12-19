@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp" "/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/Projects/particle/CMakeFiles/particle.dir/main.cpp.o"
+  "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Projects/particle/main.cpp" "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/Projects/particle/CMakeFiles/particle.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "CISPBA_PLUGIN_DIR=\"/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/Plugins\""
+  "CISPBA_PLUGIN_DIR=\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/Plugins\""
   )
 
 # The include file search paths:

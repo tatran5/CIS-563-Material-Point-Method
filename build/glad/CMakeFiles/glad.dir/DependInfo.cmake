@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/src/glad.c" "/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/glad/CMakeFiles/glad.dir/src/glad.c.o"
+  "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/glad/src/glad.c" "/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/glad/CMakeFiles/glad.dir/src/glad.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "CISPBA_PLUGIN_DIR=\"/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/build/Plugins\""
+  "CISPBA_PLUGIN_DIR=\"/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/build/Plugins\""
   )
 
 # The include file search paths:

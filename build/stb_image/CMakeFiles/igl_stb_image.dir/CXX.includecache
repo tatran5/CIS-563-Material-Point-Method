@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.cpp
 igl_stb_image.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.h
 stb_image.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image.h
 stb_image_write.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image_write.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image_write.h
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/igl_stb_image.h
 igl_stb_image_export.h
 -
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image.h
 stb_image.h
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image.h
 stdio.h
 -
 stdarg.h
@@ -46,7 +46,7 @@ intrin.h
 arm_neon.h
 -
 
-/home/tatran/Desktop/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image_write.h
+/home/tatran/Documents/CIS-563-Final-Project-Particle-Take-2/Deps/libigl/external/stb_image/stb_image_write.h
 stdio.h
 -
 stdarg.h
