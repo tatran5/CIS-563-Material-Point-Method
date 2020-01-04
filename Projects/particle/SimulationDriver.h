@@ -58,7 +58,7 @@ public:
 		maxCorner = 1.f;
 		res = (maxCorner - minCorner) / dx + 1;
 		// Set values for add-on grid parameters
-		NpPerCell1D = 12.f;
+		NpPerCell1D = 8.f;
 		offsetGrid = 6.f;
 		numNode = res * res * res;
 
@@ -156,17 +156,17 @@ public:
 			T widthX = largestX - smallestX;
 			T widthY = largestY - smallestY;
 			T widthZ = largestZ - smallestZ;
-			T scale = 1.f / (maxValueFromThree(widthX, widthY, widthZ) * 2.f);
+			T scale = 0.5f / maxValueFromThree(widthX, widthY, widthZ);
 
 			mesh_t mesh = shapes[0].mesh;
 
 			int numVertices = vertices.size() / 3;
 			double meshObjectPositions[vertices.size()];
 			for (int i = 0; i < vertices.size(); i++) {
-				// if (i % 3 == 0) meshObjectPositions[i] = (vertices[i] - smallestX) * scale;
-				// else if (i % 3 == 1) meshObjectPositions[i] = (vertices[i] - smallestY) * scale;
-				// else meshObjectPositions[i] = (vertices[i] - smallestZ) * scale;
-				meshObjectPositions[i] = vertices[i];
+				if (i % 3 == 0) meshObjectPositions[i] = (vertices[i] - smallestX) * scale + 0.3;
+				else if (i % 3 == 1) meshObjectPositions[i] = (vertices[i] - smallestY) * scale + 0.3;
+				else meshObjectPositions[i] = (vertices[i] - smallestZ) * scale + 0.3;
+				//meshObjectPositions[i] = vertices[i];
 			}
 //			std::cout << "Moved and scale vertices" << std::endl;
 
@@ -196,9 +196,9 @@ public:
 									T offsetZ = randWithOffset(0, estDistBwPars1D, 0.000001f);
 
 									TV parPos = TV::Zero();
-									parPos[0] = cellWorldSpace[0] + px * estDistBwPars1D;// + offsetX;
-									parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D;// + offsetY;
-									parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D;// + offsetZ;
+									parPos[0] = cellWorldSpace[0] + px * estDistBwPars1D + offsetX;
+									parPos[1] = cellWorldSpace[1] + py * estDistBwPars1D + offsetY;
+									parPos[2] = cellWorldSpace[2] + pz * estDistBwPars1D + offsetZ;
 
 									double testPoint[3] = {parPos[0], parPos[1], parPos[2]};
 									if (point_inside_mesh(&testPoint[0], pMeshObject)) {
